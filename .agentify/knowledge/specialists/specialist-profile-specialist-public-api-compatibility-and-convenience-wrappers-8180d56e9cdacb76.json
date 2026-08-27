@@ -1,0 +1,377 @@
+{
+  "schema_version": "1",
+  "memory_id": "specialist-profile-specialist-public-api-compatibility-and-convenience-wrappers-8180d56e9cdacb76",
+  "revision": 1,
+  "kind": "specialist",
+  "owning_agent_id": "specialist-public-api-compatibility-and-convenience-wrappers",
+  "statement": "Owns the deprecated BindWith forwarding contract and the ginS package-level facade that lazily forwards calls to one default Engine.",
+  "source_type": "validated_bootstrap",
+  "supporting_commit": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+  "evidence": [
+    {
+      "evidence_id": "evidence-17c07a5ac190887c5a6c3557",
+      "source_type": "validated_bootstrap",
+      "repository_path": "binding/binding.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "176e200c0c0ae26eff015202787285d5205ff068d475dce9339fc5dd29008cd2",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: binding/binding.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-285bedabda5239e4c4fd56ef",
+      "source_type": "validated_bootstrap",
+      "repository_path": "ginS/gins.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "45eb3b47735bf9f4701439b752adf1ef6d41410bfbcf47cafe379f770284795d",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: ginS/gins.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-5f0531536568b107914dfca9",
+      "source_type": "validated_bootstrap",
+      "repository_path": "ginS/gins_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "14b4437cbb8fe462a9a980c586cb3cf9814ad165dfb786060afac514e79584e0",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: ginS/gins_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-69def6c5de20c1c3a0818c7b",
+      "source_type": "validated_bootstrap",
+      "repository_path": "deprecated_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "3b28b9b5a72302a2bd5960fbac164544ccd0956242ee660335c2d9c39bda3c2c",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: deprecated_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-7aa790cfb2e92b4ae000d00d",
+      "source_type": "validated_bootstrap",
+      "repository_path": "gin.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "7489e54df8c18c20bb60c30ff82c0aed2f72332ba7c124be000502645fc12be8",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: gin.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-b07f58f6d22405aca20852fc",
+      "source_type": "validated_bootstrap",
+      "repository_path": "binding/binding_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "e7261eb5ea6451ae47c6dc0ce484c1a9a3a2a2a42e190b4ca57df065bea68c8d",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: binding/binding_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-dac167425fe3191961dace62",
+      "source_type": "validated_bootstrap",
+      "repository_path": "gin_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "cc8434a09e00d673c9d1b2bdeeabef714c17ae648fb6a3e015334f468aa41c65",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: gin_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-e4a10d6ce4624f447e42a650",
+      "source_type": "validated_bootstrap",
+      "repository_path": "context_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "278eebccdeea6bf3d9897937cdbde604967052bb639b71f93ed24babf94a16cc",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: context_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-edcd6c67a215ddcedba444fe",
+      "source_type": "validated_bootstrap",
+      "repository_path": "deprecated.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "72b6893e15bb053bedaee8292166f1430991f45aa11ae5614439b71c90cf448f",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: deprecated.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-f4c2b7993aa2b49ca9ca1c19",
+      "source_type": "validated_bootstrap",
+      "repository_path": "context.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "e883d5e301055579609774ca2f9cb68b39b14f682c3240b3f384d40e9f98147e",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: context.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    }
+  ],
+  "confidence": "high",
+  "freshness": "current",
+  "dependent_paths": [
+    "binding/binding_test.go",
+    "binding/binding.go",
+    "context_test.go",
+    "context.go",
+    "deprecated_test.go",
+    "deprecated.go",
+    "gin_test.go",
+    "gin.go",
+    "ginS/gins_test.go",
+    "ginS/gins.go"
+  ],
+  "invalidation_conditions": [
+    "Revalidate when any specialist freshness dependency changes or disappears."
+  ],
+  "superseded_by": null,
+  "contradicts": [],
+  "human_attribution": null,
+  "tags": [
+    "concern-public-api-compatibility-and-convenience-wrappers",
+    "specialist-profile"
+  ],
+  "accepted_candidate_ids": [
+    "candidate-565ac62e4ce5543fc2b692a9558d3e03"
+  ],
+  "created_at": "2026-08-27T03:13:20.105Z",
+  "updated_at": "2026-08-27T03:13:20.105Z",
+  "semantic_digest": "fac489969d936b21a2e7955c8ab31f9c4a872bdc0e44719c54e539f9349a31fe",
+  "payload": {
+    "specialist_id": "specialist-public-api-compatibility-and-convenience-wrappers",
+    "concern": "Public API compatibility and convenience wrappers",
+    "one_line": "Owns the deprecated BindWith forwarding contract and the ginS package-level facade that lazily forwards calls to one default Engine.",
+    "covers": "BindWith migration logging and forwarding, legacy Engine.AppEngine compatibility, ginS sync.OnceValue state, wrapper forwarding, and tests.",
+    "excludes": "Binding implementation semantics, route-trie mechanics, general lifecycle, middleware behavior, and authentication.",
+    "flows": [
+      {
+        "name": "Deprecated BindWith forwarding",
+        "description": "The legacy API logs guidance and forwards into the current explicit-binding path.",
+        "steps": [
+          {
+            "path": "deprecated.go",
+            "what_happens": "Context.BindWith logs the issue-662 notice and calls MustBindWith."
+          },
+          {
+            "path": "context.go",
+            "what_happens": "MustBindWith delegates to ShouldBindWith and invokes the supplied Binding."
+          },
+          {
+            "path": "binding/binding.go",
+            "what_happens": "The selected Binding receives the request and destination."
+          },
+          {
+            "path": "deprecated_test.go",
+            "what_happens": "TestBindWith captures the notice and verifies Form results."
+          }
+        ]
+      },
+      {
+        "name": "ginS lazy facade forwarding",
+        "description": "Package helpers share one lazily created gin.Default Engine and forward calls to it.",
+        "steps": [
+          {
+            "path": "ginS/gins.go",
+            "what_happens": "sync.OnceValue creates one gin.Default Engine on first use."
+          },
+          {
+            "path": "ginS/gins.go",
+            "what_happens": "GET, POST, Use, NoRoute, Static, and Run call engine().X."
+          },
+          {
+            "path": "gin.go",
+            "what_happens": "The target Engine and embedded RouterGroup implement forwarded operations."
+          },
+          {
+            "path": "ginS/gins_test.go",
+            "what_happens": "Wrapper tests register routes and serve requests through the cached engine."
+          }
+        ]
+      }
+    ],
+    "touchpoints": [
+      {
+        "path": "binding/binding_test.go",
+        "symbol": null,
+        "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "binding/binding.go",
+        "symbol": null,
+        "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "context_test.go",
+        "symbol": null,
+        "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "context.go",
+        "symbol": "MustBindWith/ShouldBindWith",
+        "role": "Deprecated forwarding target.",
+        "line_range": [
+          780,
+          855
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "deprecated_test.go",
+        "symbol": "TestBindWith",
+        "role": "Deprecation forwarding test.",
+        "line_range": [
+          12,
+          32
+        ],
+        "centrality": "core"
+      },
+      {
+        "path": "deprecated.go",
+        "symbol": "Context.BindWith",
+        "role": "Core deprecated shim and migration notice.",
+        "line_range": [
+          16,
+          26
+        ],
+        "centrality": "core"
+      },
+      {
+        "path": "gin_test.go",
+        "symbol": null,
+        "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "gin.go",
+        "symbol": "Engine/New/Default/Use/Run*/ServeHTTP",
+        "role": "Forward target Engine surface.",
+        "line_range": [
+          109,
+          220
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "ginS/gins_test.go",
+        "symbol": "TestGET/TestPOST/TestGroup/TestUse/TestNoRoute/TestStatic*",
+        "role": "Wrapper integration tests.",
+        "line_range": [
+          18,
+          233
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "ginS/gins.go",
+        "symbol": "engine and package-level wrappers",
+        "role": "Core lazy facade and forwarding surface.",
+        "line_range": [
+          14,
+          169
+        ],
+        "centrality": "core"
+      }
+    ],
+    "invariants": [
+      {
+        "rule": "BindWith remains a logging synonym for MustBindWith and preserves the explicit Binding argument.",
+        "why": "Existing callers rely on this migration path.",
+        "reference": "deprecated.go"
+      },
+      {
+        "rule": "ginS constructs one gin.Default Engine and wrappers add no independent behavior.",
+        "why": "Forwarding parity defines the facade.",
+        "reference": "ginS/gins.go"
+      },
+      {
+        "rule": "Legacy Engine.AppEngine remains a soft migration surface until deliberately removed.",
+        "why": "Existing deployments may rely on its fallback.",
+        "reference": "gin.go"
+      }
+    ],
+    "pitfalls": [
+      {
+        "risk": "Changing BindWith to implicit binding selection.",
+        "consequence": "Explicit-binding callers receive different parsing behavior.",
+        "reference": "deprecated.go"
+      },
+      {
+        "risk": "Resetting ginS state or adding wrapper logic.",
+        "consequence": "Shared-engine parity drifts.",
+        "reference": "ginS/gins_test.go"
+      },
+      {
+        "risk": "Removing AppEngine fallback while retaining its marker.",
+        "consequence": "Legacy deployments lose trusted-platform behavior.",
+        "reference": "gin.go"
+      }
+    ],
+    "entry_questions": [
+      "Does ginS remain a pure forwarder?",
+      "Is AppEngine migration deliberate?",
+      "Is the change on the shim or target?",
+      "Must explicit Binding selection remain?"
+    ],
+    "context_paths": [
+      "binding/binding_test.go",
+      "binding/binding.go",
+      "context_test.go",
+      "context.go",
+      "deprecated_test.go",
+      "deprecated.go",
+      "gin_test.go",
+      "gin.go",
+      "ginS/gins_test.go",
+      "ginS/gins.go"
+    ],
+    "related_specialists": [
+      "specialist-http-basic-authentication-middleware",
+      "specialist-http-response-writer-and-reader-rendering-contract",
+      "specialist-http-route-tree-and-request-dispatch",
+      "specialist-middleware-diagnostics-and-panic-recovery",
+      "specialist-multi-format-request-binding-and-validation",
+      "specialist-pluggable-json-codec-via-build-tag-selected-backends"
+    ],
+    "validation_commands": []
+  },
+  "content_digest": "88f866bbedf059989c2503ddabbbac323fafdf3f5314a2901d6d45cd27e07ef8"
+}

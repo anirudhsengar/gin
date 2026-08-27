@@ -1,0 +1,76 @@
+{
+  "schema_version": "1",
+  "memory_id": "self-update-allowlist",
+  "revision": 1,
+  "kind": "policy",
+  "owning_agent_id": "knowledge-maintainer",
+  "statement": "Automatic learning is confined to versioned Agentify knowledge, identity, history, manifest, and canonical ignore-rule paths.",
+  "source_type": "maintainer_instruction",
+  "supporting_commit": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+  "evidence": [
+    {
+      "evidence_id": "evidence-966ea473754c97ca691fdc15",
+      "source_type": "maintainer_instruction",
+      "repository_path": "README.md",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "0c71595f35bbc7a303d2fb793b0e4639e1f3c3d1eff6a1771b705354f4e8359b",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: README.md",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "anirudhsengar"
+    }
+  ],
+  "confidence": "verified",
+  "freshness": "current",
+  "dependent_paths": [
+    ".agentify/manifest.json"
+  ],
+  "invalidation_conditions": [
+    "trusted installer upgrade changes the self-update boundary"
+  ],
+  "superseded_by": null,
+  "contradicts": [],
+  "human_attribution": {
+    "actor": "anirudhsengar",
+    "source_ref": "installer:dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+    "accepted_at": "2026-08-15T05:44:19.000Z"
+  },
+  "tags": [
+    "allowlist",
+    "policy",
+    "self-update"
+  ],
+  "accepted_candidate_ids": [
+    "installer-self-update-policy-v1"
+  ],
+  "created_at": "2026-08-27T02:10:15.560Z",
+  "updated_at": "2026-08-27T02:10:15.560Z",
+  "semantic_digest": "967048c7568c55ece3020e204260db26b35b5bfbb14ba0fe91b86210bca5373e",
+  "payload": {
+    "policy_key": "self-update-allowlist",
+    "rule": "Only .agentify agents, knowledge, history, manifest, and canonical ignore rules may self-update; policies, application source, dependencies, workflows, runtime code, and operational state are immutable to learning.",
+    "protected_paths": [
+      ".agentify/policies",
+      ".agentify/runtime",
+      ".agentify/state-transactions",
+      ".github",
+      "package-lock.json",
+      "package.json"
+    ],
+    "allowed_tools": [],
+    "forbidden_actions": [
+      "application source update",
+      "dependency update",
+      "permission expansion",
+      "policy update",
+      "runtime code update",
+      "workflow update"
+    ],
+    "approval_required": true,
+    "numeric_limit": null,
+    "unit": null
+  },
+  "content_digest": "6adec942185a238a2dea18ee6b5aa6ad693da33121c7842e78d473091b6ef842"
+}

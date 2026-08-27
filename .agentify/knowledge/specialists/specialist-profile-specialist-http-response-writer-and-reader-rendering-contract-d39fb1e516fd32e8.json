@@ -1,0 +1,354 @@
+{
+  "schema_version": "1",
+  "memory_id": "specialist-profile-specialist-http-response-writer-and-reader-rendering-contract-d39fb1e516fd32e8",
+  "revision": 1,
+  "kind": "specialist",
+  "owning_agent_id": "specialist-http-response-writer-and-reader-rendering-contract",
+  "statement": "Owns staged response status and size, header commitment, interface delegation, and render.Reader header/body copying.",
+  "source_type": "validated_bootstrap",
+  "supporting_commit": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+  "evidence": [
+    {
+      "evidence_id": "evidence-17c07a5ac190887c5a6c3557",
+      "source_type": "validated_bootstrap",
+      "repository_path": "binding/binding.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "176e200c0c0ae26eff015202787285d5205ff068d475dce9339fc5dd29008cd2",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: binding/binding.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-51088312ccbab16d653a88d6",
+      "source_type": "validated_bootstrap",
+      "repository_path": "response_writer.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "906e5673f82a077b04d443bacdbad041398e2c6eb4ba7fe8627b04be6321f5a6",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: response_writer.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-6b66ba57d90414d9f0cdd6ab",
+      "source_type": "validated_bootstrap",
+      "repository_path": "render/reader_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "e995280e8ead41f4ec3311bd379d63d22db4051e421bf7bc8ede44b1479c4b89",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: render/reader_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-7aa790cfb2e92b4ae000d00d",
+      "source_type": "validated_bootstrap",
+      "repository_path": "gin.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "7489e54df8c18c20bb60c30ff82c0aed2f72332ba7c124be000502645fc12be8",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: gin.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-9ebde21d0ff886bc1a578207",
+      "source_type": "validated_bootstrap",
+      "repository_path": "response_writer_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "92846882c2ef9379c222e0515679a97c06bd116542e4e7cafeb85c1562357fa5",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: response_writer_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-a7aae7dc4107828e8331f274",
+      "source_type": "validated_bootstrap",
+      "repository_path": "render/reader.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "be509151872af8fbce922ad971843c2faa7cc5f7e49ad921bc290281f39b1786",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: render/reader.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-dac167425fe3191961dace62",
+      "source_type": "validated_bootstrap",
+      "repository_path": "gin_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "cc8434a09e00d673c9d1b2bdeeabef714c17ae648fb6a3e015334f468aa41c65",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: gin_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-e4a10d6ce4624f447e42a650",
+      "source_type": "validated_bootstrap",
+      "repository_path": "context_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "278eebccdeea6bf3d9897937cdbde604967052bb639b71f93ed24babf94a16cc",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: context_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-f4c2b7993aa2b49ca9ca1c19",
+      "source_type": "validated_bootstrap",
+      "repository_path": "context.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "e883d5e301055579609774ca2f9cb68b39b14f682c3240b3f384d40e9f98147e",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: context.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    }
+  ],
+  "confidence": "high",
+  "freshness": "current",
+  "dependent_paths": [
+    "binding/binding.go",
+    "context_test.go",
+    "context.go",
+    "gin_test.go",
+    "gin.go",
+    "render/reader_test.go",
+    "render/reader.go",
+    "response_writer_test.go",
+    "response_writer.go"
+  ],
+  "invalidation_conditions": [
+    "Revalidate when any specialist freshness dependency changes or disappears."
+  ],
+  "superseded_by": null,
+  "contradicts": [],
+  "human_attribution": null,
+  "tags": [
+    "concern-http-response-writer-and-reader-rendering-contract",
+    "specialist-profile"
+  ],
+  "accepted_candidate_ids": [
+    "candidate-762ebd609c9f3c8c263ff3f7ba554771"
+  ],
+  "created_at": "2026-08-27T03:13:17.369Z",
+  "updated_at": "2026-08-27T03:13:17.369Z",
+  "semantic_digest": "5588daace6f4751fd33fd9c62a01c0a02bdfae9539ca91785991c68c6fe430a8",
+  "payload": {
+    "specialist_id": "specialist-http-response-writer-and-reader-rendering-contract",
+    "concern": "HTTP response writer and Reader rendering contract",
+    "one_line": "Owns staged response status and size, header commitment, interface delegation, and render.Reader header/body copying.",
+    "covers": "ResponseWriter and Reader behavior through Context/Gin integration and tests.",
+    "excludes": "Routing, handler composition, logging/recovery, template/JSON serialization internals, and listener setup.",
+    "flows": [
+      {
+        "name": "DataFromReader response",
+        "description": "A reader response stages status, writes headers, commits on body copy, and is finalized by the engine.",
+        "steps": [
+          {
+            "path": "context.go",
+            "what_happens": "DataFromReader constructs render.Reader and calls Render."
+          },
+          {
+            "path": "render/reader.go",
+            "what_happens": "Reader.Render writes Content-Type and missing headers, adds Content-Length, and calls io.Copy."
+          },
+          {
+            "path": "response_writer.go",
+            "what_happens": "responseWriter.Write commits headers before forwarding bytes and increments size."
+          },
+          {
+            "path": "gin.go",
+            "what_happens": "handleHTTPRequest performs final WriteHeaderNow for empty responses."
+          }
+        ]
+      },
+      {
+        "name": "Hijack and streaming lifecycle",
+        "description": "The wrapper preserves safe fallbacks and header-before-body behavior.",
+        "steps": [
+          {
+            "path": "response_writer.go",
+            "what_happens": "Hijack rejects body-written responses and delegates or returns ErrNotSupported."
+          },
+          {
+            "path": "response_writer_test.go",
+            "what_happens": "Tests pin status, size, flush, and hijack transitions."
+          },
+          {
+            "path": "render/reader.go",
+            "what_happens": "writeHeaders preserves existing header overrides."
+          },
+          {
+            "path": "render/reader_test.go",
+            "what_happens": "Reader rendering succeeds without an optional Headers map."
+          }
+        ]
+      }
+    ],
+    "touchpoints": [
+      {
+        "path": "binding/binding.go",
+        "symbol": null,
+        "role": "Shared Binding contract definition consumed by this concern.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "context_test.go",
+        "symbol": null,
+        "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "context.go",
+        "symbol": "Context.Render/DataFromReader/writermem",
+        "role": "Writer and Reader integration.",
+        "line_range": [
+          62,
+          1300
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "gin_test.go",
+        "symbol": null,
+        "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "gin.go",
+        "symbol": "Engine.ServeHTTP/handleHTTPRequest",
+        "role": "Writer reset and final commit.",
+        "line_range": [
+          660,
+          832
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "render/reader_test.go",
+        "symbol": "TestReaderRenderNoHeaders",
+        "role": "Reader edge-case test.",
+        "line_range": [
+          14,
+          23
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "render/reader.go",
+        "symbol": "Reader.Render/WriteContentType/writeHeaders",
+        "role": "Core streaming renderer.",
+        "line_range": [
+          12,
+          50
+        ],
+        "centrality": "core"
+      },
+      {
+        "path": "response_writer_test.go",
+        "symbol": "TestResponseWriter*",
+        "role": "Writer contract tests.",
+        "line_range": [
+          18,
+          280
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "response_writer.go",
+        "symbol": "ResponseWriter/responseWriter",
+        "role": "Core writer state machine and interface.",
+        "line_range": [
+          19,
+          164
+        ],
+        "centrality": "core"
+      }
+    ],
+    "invariants": [
+      {
+        "rule": "WriteHeader stages status and WriteHeaderNow commits once; body writes and Flush commit first.",
+        "why": "Renderers need a header window after status staging.",
+        "reference": "response_writer.go"
+      },
+      {
+        "rule": "Reader emits Content-Length only for non-negative lengths and only fills absent headers.",
+        "why": "Unknown lengths remain unset and overrides survive.",
+        "reference": "render/reader.go"
+      },
+      {
+        "rule": "Hijack is allowed before body bytes and unsupported writers return ErrNotSupported.",
+        "why": "This preserves websocket compatibility and normal fallback.",
+        "reference": "response_writer.go"
+      }
+    ],
+    "pitfalls": [
+      {
+        "risk": "Treating Status as an immediate commit.",
+        "consequence": "Header ordering becomes incorrect.",
+        "reference": "response_writer.go"
+      },
+      {
+        "risk": "Reusing Reader.Headers across renders.",
+        "consequence": "Content-Length mutation can race.",
+        "reference": "render/reader.go"
+      },
+      {
+        "risk": "Assuming every writer supports Hijacker or Flusher.",
+        "consequence": "Streaming or fallback behavior changes.",
+        "reference": "response_writer.go"
+      }
+    ],
+    "entry_questions": [
+      "Can the writer lack Hijacker or Flusher?",
+      "Does the change occur before final WriteHeaderNow?",
+      "Is content length known?"
+    ],
+    "context_paths": [
+      "binding/binding.go",
+      "context_test.go",
+      "context.go",
+      "gin_test.go",
+      "gin.go",
+      "render/reader_test.go",
+      "render/reader.go",
+      "response_writer_test.go",
+      "response_writer.go"
+    ],
+    "related_specialists": [
+      "specialist-http-basic-authentication-middleware",
+      "specialist-http-route-tree-and-request-dispatch",
+      "specialist-middleware-diagnostics-and-panic-recovery",
+      "specialist-multi-format-request-binding-and-validation",
+      "specialist-pluggable-json-codec-via-build-tag-selected-backends",
+      "specialist-public-api-compatibility-and-convenience-wrappers"
+    ],
+    "validation_commands": []
+  },
+  "content_digest": "0db5ca44ed95c40262a8f6b62d7fd160f98e9af94df8dd3b684ef25c14eceb2f"
+}

@@ -1,0 +1,351 @@
+{
+  "schema_version": "1",
+  "memory_id": "specialist-profile-specialist-middleware-diagnostics-and-panic-recovery-62a6847d67078f3d",
+  "revision": 1,
+  "kind": "specialist",
+  "owning_agent_id": "specialist-middleware-diagnostics-and-panic-recovery",
+  "statement": "Owns debug-print gating, access-log formatting, panic recovery, broken-pipe handling, and Authorization redaction across built-in middleware.",
+  "source_type": "validated_bootstrap",
+  "supporting_commit": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+  "evidence": [
+    {
+      "evidence_id": "evidence-28bca4b0fe754a2a3875e818",
+      "source_type": "validated_bootstrap",
+      "repository_path": "recovery_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "3b9918a66cb0f77b50ba6115cf452df18ebfe85fc4865e2243293ec66b2bd36f",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: recovery_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-728d353da64a1f661bd81a5e",
+      "source_type": "validated_bootstrap",
+      "repository_path": "debug_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "6da10fd79978e248f7d41e5e10568e6df28ebb2ab9e160551a6ff8be858c03f2",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: debug_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-7aa790cfb2e92b4ae000d00d",
+      "source_type": "validated_bootstrap",
+      "repository_path": "gin.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "7489e54df8c18c20bb60c30ff82c0aed2f72332ba7c124be000502645fc12be8",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: gin.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-893476b26b41c2cc8aa84f61",
+      "source_type": "validated_bootstrap",
+      "repository_path": "debug.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "b0d7cf5455f4a0f7969e39e65de131f72ad44018f51cbf9d70ede0eeecaa8737",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: debug.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-bea5790c366e3fd928304aa1",
+      "source_type": "validated_bootstrap",
+      "repository_path": "logger.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "ea27eff2d108922bfb0f4f669beefcfe44727b4a749dfff3e596980063a339c7",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: logger.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-dac167425fe3191961dace62",
+      "source_type": "validated_bootstrap",
+      "repository_path": "gin_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "cc8434a09e00d673c9d1b2bdeeabef714c17ae648fb6a3e015334f468aa41c65",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: gin_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-dd38fa63399ac877b5c07b41",
+      "source_type": "validated_bootstrap",
+      "repository_path": "logger_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "3142926b1eba3624bc8cf0ea8de6b9e09427001ce77624c775e8e749517a013a",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: logger_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-eb9a812f42d2e9b66dc1f21b",
+      "source_type": "validated_bootstrap",
+      "repository_path": "recovery.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "3b8c0e5f7f72a9bca669f031d880d201cb43044240767e7dc2fa5af17ec73f61",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: recovery.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    }
+  ],
+  "confidence": "high",
+  "freshness": "current",
+  "dependent_paths": [
+    "debug_test.go",
+    "debug.go",
+    "gin_test.go",
+    "gin.go",
+    "logger_test.go",
+    "logger.go",
+    "recovery_test.go",
+    "recovery.go"
+  ],
+  "invalidation_conditions": [
+    "Revalidate when any specialist freshness dependency changes or disappears."
+  ],
+  "superseded_by": null,
+  "contradicts": [],
+  "human_attribution": null,
+  "tags": [
+    "concern-middleware-diagnostics-and-panic-recovery",
+    "specialist-profile"
+  ],
+  "accepted_candidate_ids": [
+    "candidate-7aeeaa80b3d99a049ad85b6997a3f0f0"
+  ],
+  "created_at": "2026-08-27T03:13:18.144Z",
+  "updated_at": "2026-08-27T03:13:18.144Z",
+  "semantic_digest": "0167d5bd9734e25c441065a73c89bfc7ea58194fb1add6510df11d29fc8dae0e",
+  "payload": {
+    "specialist_id": "specialist-middleware-diagnostics-and-panic-recovery",
+    "concern": "Middleware diagnostics and panic recovery",
+    "one_line": "Owns debug-print gating, access-log formatting, panic recovery, broken-pipe handling, and Authorization redaction across built-in middleware.",
+    "covers": "Debug hooks, Logger constructors/formatters/skips, Recovery handlers/request dumps, and exact tests.",
+    "excludes": "Context handler-chain/error storage mechanics, route-trie correctness, authentication policy, and listener lifecycle.",
+    "flows": [
+      {
+        "name": "Debug lifecycle diagnostics",
+        "description": "Route/template lifecycle events share the mode-gated diagnostic pipeline.",
+        "steps": [
+          {
+            "path": "gin.go",
+            "what_happens": "Route registration and template loading invoke debug helpers."
+          },
+          {
+            "path": "debug.go",
+            "what_happens": "debugPrint selects the hook or [GIN-debug] output."
+          },
+          {
+            "path": "debug_test.go",
+            "what_happens": "Tests assert non-debug silence, hooks, warnings, route/template output, and capture."
+          }
+        ]
+      },
+      {
+        "name": "Default middleware observability",
+        "description": "Default wires Logger and Recovery and Logger observes the post-handler response.",
+        "steps": [
+          {
+            "path": "gin.go",
+            "what_happens": "Default creates New and attaches Logger before Recovery."
+          },
+          {
+            "path": "debug.go",
+            "what_happens": "IsDebugging gates warnings, route/template diagnostics, and hooks."
+          },
+          {
+            "path": "logger.go",
+            "what_happens": "Logger times c.Next and formats status, latency, client IP, errors, keys, and body size."
+          },
+          {
+            "path": "logger_test.go",
+            "what_happens": "Tests cover constructors, formatting, colors, skips, query suppression, and ErrorLogger."
+          }
+        ]
+      },
+      {
+        "name": "Panic safety and sanitized diagnostics",
+        "description": "Recovery classifies panics and masks Authorization in diagnostics.",
+        "steps": [
+          {
+            "path": "recovery.go",
+            "what_happens": "Recovery defers recover around c.Next and classifies broken-pipe sentinels."
+          },
+          {
+            "path": "recovery.go",
+            "what_happens": "Normal panics log and invoke recovery; broken pipes record and abort without status."
+          },
+          {
+            "path": "debug.go",
+            "what_happens": "The debug gate controls recovery diagnostic detail."
+          },
+          {
+            "path": "recovery_test.go",
+            "what_happens": "Tests pin 500/custom recovery, broken pipes, dumps, stack helpers, and masking."
+          }
+        ]
+      }
+    ],
+    "touchpoints": [
+      {
+        "path": "debug_test.go",
+        "symbol": "TestDebugPrint*",
+        "role": "Debug tests.",
+        "line_range": [
+          16,
+          192
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "debug.go",
+        "symbol": "IsDebugging/debugPrint*",
+        "role": "Core diagnostic gate and hooks.",
+        "line_range": [
+          17,
+          113
+        ],
+        "centrality": "core"
+      },
+      {
+        "path": "gin_test.go",
+        "symbol": null,
+        "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "gin.go",
+        "symbol": "Default/New/addRoute/LoadHTML*/SetHTMLTemplate",
+        "role": "Diagnostic wiring and lifecycle calls.",
+        "line_range": [
+          201,
+          314
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "logger_test.go",
+        "symbol": "TestLogger*/TestDefaultLogFormatter",
+        "role": "Logger tests.",
+        "line_range": [
+          22,
+          489
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "logger.go",
+        "symbol": "LoggerWithConfig/defaultLogFormatter/ErrorLoggerT",
+        "role": "Core access logging.",
+        "line_range": [
+          50,
+          311
+        ],
+        "centrality": "core"
+      },
+      {
+        "path": "recovery_test.go",
+        "symbol": "TestPanic*/TestSecureRequestDump",
+        "role": "Recovery tests.",
+        "line_range": [
+          12,
+          360
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "recovery.go",
+        "symbol": "RecoveryWithWriter/CustomRecoveryWithWriter/secureRequestDump/stack",
+        "role": "Core recovery and credential redaction.",
+        "line_range": [
+          30,
+          159
+        ],
+        "centrality": "core"
+      }
+    ],
+    "invariants": [
+      {
+        "rule": "Logger captures path before c.Next and status/errors/body state after it; Default installs Logger before Recovery.",
+        "why": "The log must see the recovered final status.",
+        "reference": "logger.go"
+      },
+      {
+        "rule": "Recovery treats EPIPE, ECONNRESET, and http.ErrAbortHandler as broken pipes without writing status.",
+        "why": "A dead client cannot receive a 500.",
+        "reference": "recovery.go"
+      },
+      {
+        "rule": "secureRequestDump masks Authorization lines and debugPrint is silent outside debug mode.",
+        "why": "Diagnostics avoid credential leakage and release noise.",
+        "reference": "recovery.go"
+      }
+    ],
+    "pitfalls": [
+      {
+        "risk": "Reordering Logger and Recovery.",
+        "consequence": "Access logs can record the wrong panic status.",
+        "reference": "gin.go"
+      },
+      {
+        "risk": "Handling broken pipes as ordinary panics.",
+        "consequence": "Recovery attempts a dead-socket write.",
+        "reference": "recovery.go"
+      },
+      {
+        "risk": "Treating SkipPaths as prefix matches.",
+        "consequence": "Variants continue to be logged.",
+        "reference": "logger.go"
+      }
+    ],
+    "entry_questions": [
+      "Can the panic be a broken-pipe sentinel?",
+      "Does middleware ordering remain Logger around Recovery?",
+      "Must the diagnostic remain silent outside debug mode?"
+    ],
+    "context_paths": [
+      "debug_test.go",
+      "debug.go",
+      "gin_test.go",
+      "gin.go",
+      "logger_test.go",
+      "logger.go",
+      "recovery_test.go",
+      "recovery.go"
+    ],
+    "related_specialists": [
+      "specialist-http-response-writer-and-reader-rendering-contract",
+      "specialist-http-route-tree-and-request-dispatch",
+      "specialist-public-api-compatibility-and-convenience-wrappers",
+      "specialist-zero-allocation-string-byte-conversion"
+    ],
+    "validation_commands": []
+  },
+  "content_digest": "31b6a040c153139c2d696d15019582c4e2e45254b6c06a2235e06656b5440e35"
+}

@@ -1,0 +1,545 @@
+{
+  "schema_version": "1",
+  "memory_id": "specialist-profile-specialist-pluggable-json-codec-via-build-tag-selected-backends-4f781419bc3165db",
+  "revision": 1,
+  "kind": "specialist",
+  "owning_agent_id": "specialist-pluggable-json-codec-via-build-tag-selected-backends",
+  "statement": "The codec/json Core seam selects one JSON backend at build time and routes JSON binding, rendering, form coercion, and error marshaling through a mutable package API.",
+  "source_type": "validated_bootstrap",
+  "supporting_commit": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+  "evidence": [
+    {
+      "evidence_id": "evidence-170e8023be8b2dac52f74e95",
+      "source_type": "validated_bootstrap",
+      "repository_path": "binding/json.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "d243c6e10cf15fb599b2251359c822604029af7d4e1cfa415a58d7b9939f9c44",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: binding/json.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-17c07a5ac190887c5a6c3557",
+      "source_type": "validated_bootstrap",
+      "repository_path": "binding/binding.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "176e200c0c0ae26eff015202787285d5205ff068d475dce9339fc5dd29008cd2",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: binding/binding.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-24a86c81667fb4b26f885dde",
+      "source_type": "validated_bootstrap",
+      "repository_path": "codec/json/jsoniter.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "eb34e50d9c14ae6ec407a90ee5262b3950c4add20c7f24892e31f3420b9f29d9",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: codec/json/jsoniter.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-3ac463f64b348c224b88ade0",
+      "source_type": "validated_bootstrap",
+      "repository_path": "binding/form_mapping.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "f4614e1a18dd51ee8cfa6030c4a62b55920675d74eca9b54c0891038bbf098dc",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: binding/form_mapping.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-443cc7aad620085a032f6537",
+      "source_type": "validated_bootstrap",
+      "repository_path": "codec/json/sonic.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "3a80faca223df055f6a6bc0f00aeb21a5cf7860efee6c1b7f892151740a3ad4f",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: codec/json/sonic.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-47b059cedbaa0fb3301f8e45",
+      "source_type": "validated_bootstrap",
+      "repository_path": "codec/json/go_json.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "e97717cdc11968e29118767937309f4f5c1d4586b26ed975bc15a02ce47f9f20",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: codec/json/go_json.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-4c1899463e550cda7ec320f0",
+      "source_type": "validated_bootstrap",
+      "repository_path": "mode_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "1b5ebc84c4cb998ab926895f39acf89619c93fccfdcb73c9abc5a480822222d7",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: mode_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-60c8981ba762a88650e1f2d4",
+      "source_type": "validated_bootstrap",
+      "repository_path": "errors_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "d42ae35757a149990173ffb942c4b8159cd2dd856ec61f36dda65ac67b67dc62",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: errors_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-6831ab9e7df3eacd26d96b3e",
+      "source_type": "validated_bootstrap",
+      "repository_path": "binding/json_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "b8674a89b88d155631eb80daf7c3c1e2c0bbe3829fc86021f59d2d8574d89208",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: binding/json_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-85f5fed0f4b3be09a3d9bf1e",
+      "source_type": "validated_bootstrap",
+      "repository_path": "binding/form_mapping_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "982b6d6ff17196ec2d1c1e189808152a9c7e90390934b2c91cb3aa5fee198854",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: binding/form_mapping_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-92fa50e8966e7a09e61222ec",
+      "source_type": "validated_bootstrap",
+      "repository_path": "codec/json/json.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "e5f9ca595f98cd59a4dbf2e5a69a952ccfdee0a5fe14e106bfd207d23d9d89af",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: codec/json/json.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-9a6114d22272f37a56347451",
+      "source_type": "validated_bootstrap",
+      "repository_path": "codec/json/api.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "8415df4e9bb8eeeebdfb9998c0c1c95bd2f0707d1c144b5293943a8d36033425",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: codec/json/api.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-cccb0e9cfa1cbb7ad2dab18d",
+      "source_type": "validated_bootstrap",
+      "repository_path": "mode.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "ce47afda3ca06f979b1689e1340c604f72639d2d8dfca5265bec56f7bb6dfb7e",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: mode.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-da54541a34cf3d0b57fe6cc1",
+      "source_type": "validated_bootstrap",
+      "repository_path": "errors.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "98e86f323c9bf2b960f631d85f080417394758d79d1a9bfd7a45dd0f51fb57ea",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: errors.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-e2657a811fbd0e01777508f2",
+      "source_type": "validated_bootstrap",
+      "repository_path": "render/json.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "fa3d00b7dcbc6af8cfab53d99eb2adf21951230109376b06d6dce263fa41fd11",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: render/json.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-e4a10d6ce4624f447e42a650",
+      "source_type": "validated_bootstrap",
+      "repository_path": "context_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "278eebccdeea6bf3d9897937cdbde604967052bb639b71f93ed24babf94a16cc",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: context_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-f4c2b7993aa2b49ca9ca1c19",
+      "source_type": "validated_bootstrap",
+      "repository_path": "context.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "e883d5e301055579609774ca2f9cb68b39b14f682c3240b3f384d40e9f98147e",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: context.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    }
+  ],
+  "confidence": "high",
+  "freshness": "current",
+  "dependent_paths": [
+    "binding/binding.go",
+    "binding/form_mapping_test.go",
+    "binding/form_mapping.go",
+    "binding/json_test.go",
+    "binding/json.go",
+    "codec/json/api.go",
+    "codec/json/go_json.go",
+    "codec/json/json.go",
+    "codec/json/jsoniter.go",
+    "codec/json/sonic.go",
+    "context_test.go",
+    "context.go",
+    "errors_test.go",
+    "errors.go",
+    "mode_test.go",
+    "mode.go",
+    "render/json.go"
+  ],
+  "invalidation_conditions": [
+    "Revalidate when any specialist freshness dependency changes or disappears."
+  ],
+  "superseded_by": null,
+  "contradicts": [],
+  "human_attribution": null,
+  "tags": [
+    "concern-pluggable-json-codec-via-build-tag-selected-backends",
+    "specialist-profile"
+  ],
+  "accepted_candidate_ids": [
+    "candidate-dac720136293e71b9ff5a5f625153cbd"
+  ],
+  "created_at": "2026-08-27T03:13:19.672Z",
+  "updated_at": "2026-08-27T03:13:19.672Z",
+  "semantic_digest": "633646e6e09cce75b4be1728b9a6843be4056d916d29f54a356a346ab22c8043",
+  "payload": {
+    "specialist_id": "specialist-pluggable-json-codec-via-build-tag-selected-backends",
+    "concern": "Pluggable JSON codec via build-tag-selected backends",
+    "one_line": "The codec/json Core seam selects one JSON backend at build time and routes JSON binding, rendering, form coercion, and error marshaling through a mutable package API.",
+    "covers": "codec/json interfaces, build-tag backends, decoder facade, and downstream JSON consumers.",
+    "excludes": "Non-JSON codecs, external dependency internals, and ginS.",
+    "flows": [
+      {
+        "name": "JSON decode through selected backend",
+        "description": "Binding reaches the active backend and validation.",
+        "steps": [
+          {
+            "path": "context.go",
+            "what_happens": "BindJSON and MustBindWith enter binding.JSON."
+          },
+          {
+            "path": "binding/json.go",
+            "what_happens": "decodeJSON obtains json.API.NewDecoder, applies decoder flags, decodes, and validates."
+          },
+          {
+            "path": "codec/json/api.go",
+            "what_happens": "Core and Decoder define the swap contract."
+          },
+          {
+            "path": "codec/json/json.go",
+            "what_happens": "The default build-tag backend initializes API."
+          }
+        ]
+      },
+      {
+        "name": "JSON encode and runtime swap",
+        "description": "Renderers and errors use the same API seam.",
+        "steps": [
+          {
+            "path": "render/json.go",
+            "what_happens": "JSON renderers call API marshal and encoder methods."
+          },
+          {
+            "path": "errors.go",
+            "what_happens": "Error envelopes marshal through API.Marshal."
+          },
+          {
+            "path": "binding/json_test.go",
+            "what_happens": "The custom codec test swaps API and exercises decode and encode."
+          }
+        ]
+      }
+    ],
+    "touchpoints": [
+      {
+        "path": "binding/binding.go",
+        "symbol": null,
+        "role": "Shared Binding contract definition consumed by this concern.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "binding/form_mapping_test.go",
+        "symbol": null,
+        "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "binding/form_mapping.go",
+        "symbol": "setWithProperType",
+        "role": "Form-to-JSON coercion.",
+        "line_range": [
+          373,
+          379
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "binding/json_test.go",
+        "symbol": "TestCustomJsonCodec",
+        "role": "Custom API integration test.",
+        "line_range": [
+          38,
+          105
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "binding/json.go",
+        "symbol": "decodeJSON",
+        "role": "Decoder consumer.",
+        "line_range": [
+          17,
+          54
+        ],
+        "centrality": "core"
+      },
+      {
+        "path": "codec/json/api.go",
+        "symbol": "Core/Encoder/Decoder/API",
+        "role": "Core JSON adapter contract.",
+        "line_range": [
+          11,
+          50
+        ],
+        "centrality": "core"
+      },
+      {
+        "path": "codec/json/go_json.go",
+        "symbol": "gojsonApi/init",
+        "role": "go_json backend.",
+        "line_range": [
+          5,
+          44
+        ],
+        "centrality": "core"
+      },
+      {
+        "path": "codec/json/json.go",
+        "symbol": "jsonApi/init",
+        "role": "Default backend.",
+        "line_range": [
+          5,
+          44
+        ],
+        "centrality": "core"
+      },
+      {
+        "path": "codec/json/jsoniter.go",
+        "symbol": "jsoniterApi/init",
+        "role": "jsoniter backend.",
+        "line_range": [
+          5,
+          44
+        ],
+        "centrality": "core"
+      },
+      {
+        "path": "codec/json/sonic.go",
+        "symbol": "sonicApi/init",
+        "role": "sonic backend.",
+        "line_range": [
+          5,
+          44
+        ],
+        "centrality": "core"
+      },
+      {
+        "path": "context_test.go",
+        "symbol": null,
+        "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "context.go",
+        "symbol": null,
+        "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+        "line_range": null,
+        "centrality": "supporting"
+      },
+      {
+        "path": "errors_test.go",
+        "symbol": "TestError/TestErrorSlice",
+        "role": "Error JSON tests.",
+        "line_range": [
+          15,
+          113
+        ],
+        "centrality": "peripheral"
+      },
+      {
+        "path": "errors.go",
+        "symbol": "Error.MarshalJSON/errorMsgs.MarshalJSON",
+        "role": "Error JSON consumers.",
+        "line_range": [
+          76,
+          159
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "mode_test.go",
+        "symbol": "TestEnableJsonDecoder*",
+        "role": "Decoder toggle tests.",
+        "line_range": [
+          52,
+          61
+        ],
+        "centrality": "peripheral"
+      },
+      {
+        "path": "mode.go",
+        "symbol": "EnableJsonDecoderUseNumber/EnableJsonDecoderDisallowUnknownFields",
+        "role": "Decoder option facade.",
+        "line_range": [
+          83,
+          96
+        ],
+        "centrality": "supporting"
+      },
+      {
+        "path": "render/json.go",
+        "symbol": "WriteJSON and JSON-family Render",
+        "role": "Marshal consumers.",
+        "line_range": [
+          60,
+          192
+        ],
+        "centrality": "core"
+      }
+    ],
+    "invariants": [
+      {
+        "rule": "The selected backend satisfies Core and initializes API before consumers use it.",
+        "why": "Consumers read API without a nil check.",
+        "reference": "codec/json/api.go"
+      },
+      {
+        "rule": "Backend build tags select one implementation.",
+        "why": "Each backend assigns the same API global.",
+        "reference": "codec/json/json.go"
+      },
+      {
+        "rule": "Custom API implementations preserve Core, Encoder, and Decoder methods.",
+        "why": "All shipped backends and the swap test depend on them.",
+        "reference": "binding/json_test.go"
+      }
+    ],
+    "pitfalls": [
+      {
+        "risk": "Reassigning json.API while serving requests.",
+        "consequence": "Interface reads can race.",
+        "reference": "codec/json/api.go"
+      },
+      {
+        "risk": "Adding a Core method without updating every backend.",
+        "consequence": "Tagged builds fail.",
+        "reference": "codec/json/api.go"
+      },
+      {
+        "risk": "Assuming MaxBytesError behavior is identical across backends.",
+        "consequence": "Binding status can differ by tag.",
+        "reference": "context.go"
+      }
+    ],
+    "entry_questions": [
+      "Does a Core change update every backend?",
+      "Is API swapped during serving?",
+      "Which tag is active?"
+    ],
+    "context_paths": [
+      "binding/binding.go",
+      "binding/form_mapping_test.go",
+      "binding/form_mapping.go",
+      "binding/json_test.go",
+      "binding/json.go",
+      "codec/json/api.go",
+      "codec/json/go_json.go",
+      "codec/json/json.go",
+      "codec/json/jsoniter.go",
+      "codec/json/sonic.go",
+      "context_test.go",
+      "context.go",
+      "errors_test.go",
+      "errors.go",
+      "mode_test.go",
+      "mode.go",
+      "render/json.go"
+    ],
+    "related_specialists": [
+      "specialist-http-basic-authentication-middleware",
+      "specialist-http-response-writer-and-reader-rendering-contract",
+      "specialist-multi-format-request-binding-and-validation",
+      "specialist-public-api-compatibility-and-convenience-wrappers"
+    ],
+    "validation_commands": []
+  },
+  "content_digest": "52b525b341ca16226a0f3a1c2f03b1144eb8d7aef6a0d059d521964e36f2eae7"
+}

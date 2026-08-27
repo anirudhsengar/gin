@@ -1,0 +1,282 @@
+{
+  "schema_version": "1",
+  "event_type": "candidate_decision",
+  "candidate_id": "candidate-46d3153db3c42842ff91766e73c80d2d",
+  "memory_id": "specialist-profile-specialist-http-basic-authentication-middleware-6729b0ec69d3b1fd",
+  "candidate": {
+    "schema_version": "1",
+    "memory_id": "specialist-profile-specialist-http-basic-authentication-middleware-6729b0ec69d3b1fd",
+    "kind": "specialist",
+    "proposed_by_agent_id": "orchestrator",
+    "owning_agent_id": "specialist-http-basic-authentication-middleware",
+    "statement": "Precomputes Basic credentials, compares authorization values in constant time, and stores the principal or aborts with the correct origin/proxy challenge.",
+    "source_type": "validated_bootstrap",
+    "supporting_commit": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+    "evidence": [
+      {
+        "evidence_id": "evidence-17c07a5ac190887c5a6c3557",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/binding.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "176e200c0c0ae26eff015202787285d5205ff068d475dce9339fc5dd29008cd2",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/binding.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-2c53c8b7a74da5b1ef93042f",
+        "source_type": "validated_bootstrap",
+        "repository_path": "auth.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "be38ef38614d2b9488d0e73ff2f8b432fc61cc90f4b7e071d0bbf78d898464c1",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: auth.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-332810b5596a73be0cf4c508",
+        "source_type": "validated_bootstrap",
+        "repository_path": "auth_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "563dc4a800566b399f0eaf002a0f33260f1cb654247481d6c45d7b30105fb9c7",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: auth_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-e4a10d6ce4624f447e42a650",
+        "source_type": "validated_bootstrap",
+        "repository_path": "context_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "278eebccdeea6bf3d9897937cdbde604967052bb639b71f93ed24babf94a16cc",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: context_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-f4c2b7993aa2b49ca9ca1c19",
+        "source_type": "validated_bootstrap",
+        "repository_path": "context.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "e883d5e301055579609774ca2f9cb68b39b14f682c3240b3f384d40e9f98147e",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: context.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      }
+    ],
+    "confidence": "high",
+    "dependent_paths": [
+      "auth_test.go",
+      "auth.go",
+      "binding/binding.go",
+      "context_test.go",
+      "context.go"
+    ],
+    "invalidation_conditions": [
+      "Revalidate when any specialist freshness dependency changes or disappears."
+    ],
+    "contradicts": [],
+    "human_attribution": null,
+    "tags": [
+      "concern-http-basic-authentication-middleware",
+      "specialist-profile"
+    ],
+    "proposed_at": "2026-08-15T05:44:19.000Z",
+    "payload": {
+      "specialist_id": "specialist-http-basic-authentication-middleware",
+      "concern": "HTTP Basic authentication middleware",
+      "one_line": "Precomputes Basic credentials, compares authorization values in constant time, and stores the principal or aborts with the correct origin/proxy challenge.",
+      "covers": "Account preprocessing, Base64 construction, matching, context keys, challenge headers, and 401/407 behavior.",
+      "excludes": "Authorization policy, sessions/cookies/CSRF, Bearer/JWT, request-body binding, and client certificates.",
+      "flows": [
+        {
+          "name": "Origin match or 401",
+          "description": "Configured accounts become a credential table and requests receive a user key or are stopped.",
+          "steps": [
+            {
+              "path": "auth.go",
+              "what_happens": "BasicAuth normalizes realm and delegates to processAccounts."
+            },
+            {
+              "path": "auth.go",
+              "what_happens": "processAccounts validates accounts and precomputes encoded credentials."
+            },
+            {
+              "path": "auth.go",
+              "what_happens": "The handler reads Authorization and uses ConstantTimeCompare."
+            },
+            {
+              "path": "context.go",
+              "what_happens": "Success sets AuthUserKey; failure sets WWW-Authenticate and aborts with 401."
+            },
+            {
+              "path": "auth_test.go",
+              "what_happens": "Tests cover encoding, exact rejection, success storage, realm quoting, and chain stopping."
+            }
+          ]
+        },
+        {
+          "name": "Proxy match or 407",
+          "description": "The proxy variant uses a distinct header, key, challenge, and status.",
+          "steps": [
+            {
+              "path": "auth.go",
+              "what_happens": "BasicAuthForProxy selects its realm and captures processed pairs."
+            },
+            {
+              "path": "auth.go",
+              "what_happens": "Its handler compares Proxy-Authorization and stores AuthProxyUserKey."
+            },
+            {
+              "path": "context.go",
+              "what_happens": "Failure sets Proxy-Authenticate and aborts with 407."
+            },
+            {
+              "path": "auth_test.go",
+              "what_happens": "Proxy success and 407 tests verify the separate contract."
+            }
+          ]
+        }
+      ],
+      "touchpoints": [
+        {
+          "path": "auth_test.go",
+          "symbol": "TestBasicAuth*",
+          "role": "Authentication contract tests.",
+          "line_range": [
+            12,
+            190
+          ],
+          "centrality": "supporting"
+        },
+        {
+          "path": "auth.go",
+          "symbol": "Accounts/processAccounts/authorizationHeader",
+          "role": "Core account and credential construction.",
+          "line_range": [
+            17,
+            95
+          ],
+          "centrality": "core"
+        },
+        {
+          "path": "auth.go",
+          "symbol": "authPairs.searchCredential/BasicAuthForRealm/BasicAuthForProxy",
+          "role": "Core matching and enforcement.",
+          "line_range": [
+            29,
+            115
+          ],
+          "centrality": "core"
+        },
+        {
+          "path": "binding/binding.go",
+          "symbol": null,
+          "role": "Shared Binding contract definition consumed by this concern.",
+          "line_range": null,
+          "centrality": "supporting"
+        },
+        {
+          "path": "context_test.go",
+          "symbol": null,
+          "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+          "line_range": null,
+          "centrality": "supporting"
+        },
+        {
+          "path": "context.go",
+          "symbol": "requestHeader/Set/AbortWithStatus",
+          "role": "Header, storage, and abort support.",
+          "line_range": [
+            217,
+            314
+          ],
+          "centrality": "supporting"
+        }
+      ],
+      "invariants": [
+        {
+          "rule": "Empty account sets or usernames panic during middleware construction.",
+          "why": "Misconfiguration is surfaced before serving.",
+          "reference": "auth.go"
+        },
+        {
+          "rule": "Matching compares complete encoded values with ConstantTimeCompare.",
+          "why": "Exact matching prevents false authorization.",
+          "reference": "auth_test.go"
+        },
+        {
+          "rule": "Failure aborts the chain and emits its challenge/status pair.",
+          "why": "Unauthenticated handlers must not execute.",
+          "reference": "auth.go"
+        },
+        {
+          "rule": "Success exposes the principal through AuthUserKey or AuthProxyUserKey.",
+          "why": "Those keys are the downstream contract.",
+          "reference": "auth.go"
+        }
+      ],
+      "pitfalls": [
+        {
+          "risk": "Mutating Accounts after installing middleware.",
+          "consequence": "Captured pairs do not reflect runtime rotations.",
+          "reference": "auth.go"
+        },
+        {
+          "risk": "Treating an authenticated key as authorization.",
+          "consequence": "Identity is accepted without route-specific permission checks.",
+          "reference": "auth.go"
+        },
+        {
+          "risk": "Changing realm quoting or using prefix matching.",
+          "consequence": "Challenge or exact rejection behavior drifts.",
+          "reference": "auth_test.go"
+        }
+      ],
+      "entry_questions": [
+        "Does downstream code distinguish identity from authorization?",
+        "Is this origin or proxy authentication?",
+        "Will accounts or realms change after middleware creation?"
+      ],
+      "context_paths": [
+        "auth_test.go",
+        "auth.go",
+        "binding/binding.go",
+        "context_test.go",
+        "context.go"
+      ],
+      "related_specialists": [
+        "specialist-http-response-writer-and-reader-rendering-contract",
+        "specialist-multi-format-request-binding-and-validation",
+        "specialist-pluggable-json-codec-via-build-tag-selected-backends",
+        "specialist-public-api-compatibility-and-convenience-wrappers",
+        "specialist-zero-allocation-string-byte-conversion"
+      ],
+      "validation_commands": []
+    },
+    "candidate_id": "candidate-46d3153db3c42842ff91766e73c80d2d",
+    "candidate_digest": "14ce4510a244523962eb8ff07570c6ae8ac5d08b8d95ebe674d84ed209967dc2"
+  },
+  "decision": "accepted",
+  "actor": "knowledge-maintainer",
+  "reason": "accept specialist portfolio 9b1d44e4b4a9e035701dbbf6518c5dde0585a2f4ec92644f3e4d169caf56b3a2",
+  "occurred_at": "2026-08-27T03:13:16.967Z",
+  "candidate_digest": "14ce4510a244523962eb8ff07570c6ae8ac5d08b8d95ebe674d84ed209967dc2",
+  "resulting_memory_id": "specialist-profile-specialist-http-basic-authentication-middleware-6729b0ec69d3b1fd",
+  "event_digest": "c1ac6709f667c61e5182e4e09537c98dfc430a739c50954fd8e5ec75c830cb63"
+}

@@ -1,0 +1,199 @@
+{
+  "format": "agentify_team_memory",
+  "schema_version": "1",
+  "revision": 18,
+  "root": ".agentify",
+  "repository_id": "anirudhsengar/gin",
+  "history_mode": "snapshot-v1",
+  "created_at": "2026-08-27T02:10:15.423Z",
+  "updated_at": "2026-08-27T03:13:20.549Z",
+  "entries": [
+    {
+      "path": ".agentify/.gitignore",
+      "kind": "ignore_rules",
+      "sha256": "2b36b4d4e3c6eceefe15702c59b6176359f9321c6bd093dfdbcb87d900400a6c",
+      "bytes": 95
+    },
+    {
+      "path": ".agentify/agents/orchestrator.json",
+      "kind": "agent_identity",
+      "sha256": "98ff87a56f9467e709290794e4389322734818c111bc29269022630f8c205891",
+      "bytes": 1220
+    },
+    {
+      "path": ".agentify/agents/roles/builder.json",
+      "kind": "agent_identity",
+      "sha256": "f9dab19c1a909b7c2be2330e53c9b958dc813a7af32785a4bee1b32926ae4e56",
+      "bytes": 1192
+    },
+    {
+      "path": ".agentify/agents/roles/knowledge-maintainer.json",
+      "kind": "agent_identity",
+      "sha256": "d9bf1e1d3e3e02a1f7e019aa825227565415a47eaa7828e0403d5af3a6fd98d7",
+      "bytes": 1239
+    },
+    {
+      "path": ".agentify/agents/roles/reviewer.json",
+      "kind": "agent_identity",
+      "sha256": "1e849ee4e40bcdaaca167d1a97b9540e835feeb12a56be54d9552fec7a90f9c5",
+      "bytes": 1197
+    },
+    {
+      "path": ".agentify/agents/specialists/specialist-http-basic-authentication-middleware.json",
+      "kind": "agent_identity",
+      "sha256": "069710c681e82d28ea459046ea2992fb41ef519526ff71f57d3010c5fa4dc467",
+      "bytes": 3635
+    },
+    {
+      "path": ".agentify/agents/specialists/specialist-http-response-writer-and-reader-rendering-contract.json",
+      "kind": "agent_identity",
+      "sha256": "b5937824547ec109bb930e3fd231a7d276aa47b9a980fb8c1e078bb2a0cf1188",
+      "bytes": 6065
+    },
+    {
+      "path": ".agentify/agents/specialists/specialist-http-route-tree-and-request-dispatch.json",
+      "kind": "agent_identity",
+      "sha256": "fd92ebc059500debfc4cac26fb86d177924d561062ffdaff4c8362184f7e566b",
+      "bytes": 5368
+    },
+    {
+      "path": ".agentify/agents/specialists/specialist-middleware-diagnostics-and-panic-recovery.json",
+      "kind": "agent_identity",
+      "sha256": "a59af548992b4d6db897e417dbf3c4f4fce86e336f3fa824b6cb463e741becac",
+      "bytes": 5379
+    },
+    {
+      "path": ".agentify/agents/specialists/specialist-multi-format-request-binding-and-validation.json",
+      "kind": "agent_identity",
+      "sha256": "ed56c7b12c0ce87a7b3e97d818ec2d96a6b4459d3649b60974e64cffb8b23a7e",
+      "bytes": 10365
+    },
+    {
+      "path": ".agentify/agents/specialists/specialist-pluggable-json-codec-via-build-tag-selected-backends.json",
+      "kind": "agent_identity",
+      "sha256": "b8ffdc0b0a87bc7a23a2998eff92caf19e471edc81a2278c36cea1937260d989",
+      "bytes": 10831
+    },
+    {
+      "path": ".agentify/agents/specialists/specialist-public-api-compatibility-and-convenience-wrappers.json",
+      "kind": "agent_identity",
+      "sha256": "05632455f995b9648ee21ecb691d988729a54a1858ea32504167e63034511f94",
+      "bytes": 6631
+    },
+    {
+      "path": ".agentify/agents/specialists/specialist-zero-allocation-string-byte-conversion.json",
+      "kind": "agent_identity",
+      "sha256": "5740e9013677beab6f3dd850054098270d1766bd86d094f50b8e87a63a8cd863",
+      "bytes": 6029
+    },
+    {
+      "path": ".agentify/history/candidates/candidate-1b98fca8c92bd70514939ca887798eac.json",
+      "kind": "candidate_decision",
+      "sha256": "ecc027febe0ee3b87fcda48905370bcb5ba48f102d339e468eea544c1a2821a5",
+      "bytes": 13921
+    },
+    {
+      "path": ".agentify/history/candidates/candidate-46d3153db3c42842ff91766e73c80d2d.json",
+      "kind": "candidate_decision",
+      "sha256": "b3ebf1d49d4ef2dbf6f14b9369adaf8e87f198d445498c482360c2ecd177929e",
+      "bytes": 11480
+    },
+    {
+      "path": ".agentify/history/candidates/candidate-565ac62e4ce5543fc2b692a9558d3e03.json",
+      "kind": "candidate_decision",
+      "sha256": "c8419b983b39f0606cff1650e94abe5e5140cfba6968fbd8cbb40ebacf7f568f",
+      "bytes": 15841
+    },
+    {
+      "path": ".agentify/history/candidates/candidate-762ebd609c9f3c8c263ff3f7ba554771.json",
+      "kind": "candidate_decision",
+      "sha256": "6f1cec90f845e7a197a3456b1abcf5c2cb1e16f07d279508301d0bb37bbaa9ae",
+      "bytes": 14816
+    },
+    {
+      "path": ".agentify/history/candidates/candidate-7aeeaa80b3d99a049ad85b6997a3f0f0.json",
+      "kind": "candidate_decision",
+      "sha256": "4b11fea02419a928caab205e305ed5be9b34c3345e98167a700e18b864f722d2",
+      "bytes": 14306
+    },
+    {
+      "path": ".agentify/history/candidates/candidate-911f7b5426cc9eb893f7403fb6dd0560.json",
+      "kind": "candidate_decision",
+      "sha256": "8db13089e99511ceb24d48805a29fb7c338fedcf6bc07384716c811c4e210240",
+      "bytes": 24597
+    },
+    {
+      "path": ".agentify/history/candidates/candidate-c0d7d3cfc51da64798c235acb7a82111.json",
+      "kind": "candidate_decision",
+      "sha256": "ca1f436d49d9d2ac3aac0635d8e4d2c16e1fbb095a5ad10e331a8c921a3c9899",
+      "bytes": 14421
+    },
+    {
+      "path": ".agentify/history/candidates/candidate-dac720136293e71b9ff5a5f625153cbd.json",
+      "kind": "candidate_decision",
+      "sha256": "0e372dc95a0122fd81ddf195493076ba147c6b1b65deb013f5c87c7b6f8f838d",
+      "bytes": 21682
+    },
+    {
+      "path": ".agentify/history/candidates/installer-self-update-policy-v1.json",
+      "kind": "candidate_decision",
+      "sha256": "5796235170b56cc347a11b60e5eb56aca07c2ac789f40f2984286635a84701fb",
+      "bytes": 3162
+    },
+    {
+      "path": ".agentify/knowledge/specialists/specialist-profile-specialist-http-basic-authentication-middleware-6729b0ec69d3b1fd.json",
+      "kind": "memory_record",
+      "sha256": "700cbebe749e4e57afb93a78efe2e94f64f2d01cdbf97a4526af72645eedfeda",
+      "bytes": 10370
+    },
+    {
+      "path": ".agentify/knowledge/specialists/specialist-profile-specialist-http-response-writer-and-reader-rendering-contract-d39fb1e516fd32e8.json",
+      "kind": "memory_record",
+      "sha256": "1adc3d5ea6ad309b1dbe91f6c7185188dd5373ce36cc9cf5148cdba5d64fdffb",
+      "bytes": 13520
+    },
+    {
+      "path": ".agentify/knowledge/specialists/specialist-profile-specialist-http-route-tree-and-request-dispatch-3c5d2c31ddfd8af9.json",
+      "kind": "memory_record",
+      "sha256": "8c29961921cd2472cc629792607a59a4ad97ea37867ec21555f6e344ad7e81ff",
+      "bytes": 12685
+    },
+    {
+      "path": ".agentify/knowledge/specialists/specialist-profile-specialist-middleware-diagnostics-and-panic-recovery-62a6847d67078f3d.json",
+      "kind": "memory_record",
+      "sha256": "a8ddf51e61b9397d8543ddf987df85a6bd2046c7607628f2ebe1bd78771336ac",
+      "bytes": 13034
+    },
+    {
+      "path": ".agentify/knowledge/specialists/specialist-profile-specialist-multi-format-request-binding-and-validation-18ee01c48f78b541.json",
+      "kind": "memory_record",
+      "sha256": "361ec6f4a475083145e45a4d73c05aef62f191ea874e69f419ff1851f3505f40",
+      "bytes": 22907
+    },
+    {
+      "path": ".agentify/knowledge/specialists/specialist-profile-specialist-pluggable-json-codec-via-build-tag-selected-backends-4f781419bc3165db.json",
+      "kind": "memory_record",
+      "sha256": "47138c464494ef6cd31efe3727e026314bb10848948c051e005a44b6cc1bcf51",
+      "bytes": 20000
+    },
+    {
+      "path": ".agentify/knowledge/specialists/specialist-profile-specialist-public-api-compatibility-and-convenience-wrappers-8180d56e9cdacb76.json",
+      "kind": "memory_record",
+      "sha256": "f10871162b8d7d39cf972d2cece3d27fde0c0e6cf8e229a6d84ac992c65ae7c0",
+      "bytes": 14501
+    },
+    {
+      "path": ".agentify/knowledge/specialists/specialist-profile-specialist-zero-allocation-string-byte-conversion-85664cde409c5bda.json",
+      "kind": "memory_record",
+      "sha256": "ce0cbaf7538357c980d143fd2c4ae4f7b7b1c138304cd97f255e1e23679a01ac",
+      "bytes": 13163
+    },
+    {
+      "path": ".agentify/policies/self-update-allowlist.json",
+      "kind": "memory_record",
+      "sha256": "d04375de46ebd1b77481d4b5b7ea1efecfcb23dd6efa8c9e92e5665053258200",
+      "bytes": 2614
+    }
+  ],
+  "root_digest": "e3249c47d406300c73191add20c879e9006807a1b182c8534858947dcceebe86"
+}

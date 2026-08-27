@@ -1,0 +1,3179 @@
+{
+  "meta": {
+    "project_type": "Go HTTP web framework/library",
+    "languages": [
+      "Go",
+      "Make",
+      "Markdown",
+      "YAML",
+      "JSON",
+      "HTML templates",
+      "Shell"
+    ],
+    "frameworks": [
+      "Gin"
+    ],
+    "domain_hypothesis": "unknown",
+    "lifecycle": {
+      "sdlc_model": "GitHub Flow with master-targeted pull requests, CI review gates, and tag-driven releases",
+      "issue_types": [
+        "bug_report",
+        "feature_request",
+        "discussion_or_question",
+        "security_report_by_email"
+      ],
+      "review_loop": {
+        "present": true,
+        "kind": "none"
+      },
+      "documentation_loop": {
+        "present": true,
+        "kind": "none"
+      },
+      "conditional_docs": {
+        "present": false,
+        "path": null,
+        "last_updated": null,
+        "entries_count": 0
+      },
+      "aiw_scripts": [],
+      "agent_definitions": {
+        "count": 0,
+        "paths": []
+      }
+    },
+    "documentation": {
+      "agents_md": null,
+      "agents_md_line_count": null,
+      "has_ai_docs": false,
+      "has_app_docs": false,
+      "has_specs": false,
+      "conditional_docs_path": null,
+      "readme_metrics": {
+        "present": true,
+        "line_count": 229,
+        "section_count": 12
+      },
+      "ai_docs_freshness": {
+        "last_updated": null,
+        "file_count": 0
+      },
+      "specs_archive": {
+        "present": false,
+        "file_count": 0,
+        "date_range": null
+      },
+      "postmortems_dir": null,
+      "changelog_present": true
+    },
+    "formats": [
+      "Go source",
+      "Makefile",
+      "Markdown",
+      "YAML",
+      "JSON",
+      "HTML templates",
+      "shell scripts"
+    ]
+  },
+  "skeleton": {
+    "top_level_tree": [
+      ".github/",
+      "auth.go",
+      "binding/",
+      "codec/",
+      "CONTRIBUTING.md",
+      "docs/",
+      "gin.go",
+      "go.mod",
+      "internal/",
+      "Makefile",
+      "README.md",
+      "render/",
+      "routergroup.go",
+      "tree.go",
+      "*_test.go"
+    ],
+    "entry_points": [
+      {
+        "path": "gin.go",
+        "role": "core Gin engine and HTTP framework API",
+        "language": "Go",
+        "run_command": "go test ./..."
+      },
+      {
+        "path": "README.md",
+        "role": "user-facing overview and getting-started guide",
+        "language": "Markdown",
+        "run_command": "go run main.go"
+      },
+      {
+        "path": "Makefile",
+        "role": "repository validation and formatting targets",
+        "language": "Make",
+        "run_command": "make help"
+      }
+    ],
+    "code_test_mirror": {
+      "observed": false,
+      "pattern": "unknown"
+    },
+    "first_5_files_for_fresh_agent": [
+      {
+        "path": "README.md",
+        "why": "project purpose, installation, first application, and documentation links"
+      },
+      {
+        "path": "go.mod",
+        "why": "module identity, Go version, and dependency contract"
+      },
+      {
+        "path": "gin.go",
+        "why": "core engine and framework entry surface"
+      },
+      {
+        "path": "Makefile",
+        "why": "test, format, vet, lint, and tooling procedures"
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "why": "issue, pull request, branch, testing, and documentation process"
+      }
+    ],
+    "app_vs_agentic_layer": {
+      "app_layer": "unknown",
+      "agentic_layer": null,
+      "bleed_risk_paths": []
+    }
+  },
+  "module_graph": {
+    "edges": [
+      {
+        "from": "gin (root)",
+        "to": "binding",
+        "kind": "import"
+      },
+      {
+        "from": "gin (root)",
+        "to": "render",
+        "kind": "import"
+      },
+      {
+        "from": "gin (root)",
+        "to": "internal/bytesconv",
+        "kind": "import"
+      },
+      {
+        "from": "gin (root)",
+        "to": "internal/fs",
+        "kind": "import"
+      },
+      {
+        "from": "ginS",
+        "to": "gin (root)",
+        "kind": "import"
+      },
+      {
+        "from": "binding",
+        "to": "codec/json",
+        "kind": "import"
+      },
+      {
+        "from": "binding",
+        "to": "internal/bytesconv",
+        "kind": "import"
+      },
+      {
+        "from": "render",
+        "to": "codec/json",
+        "kind": "import"
+      },
+      {
+        "from": "render",
+        "to": "internal/bytesconv",
+        "kind": "import"
+      },
+      {
+        "from": "render",
+        "to": "internal/fs",
+        "kind": "import"
+      }
+    ],
+    "parallelizable_subtrees": [],
+    "shared_state": [
+      "binding.Validator",
+      "codec/json.API"
+    ],
+    "client_server_split": null,
+    "shared_abstractions": [
+      "internal/bytesconv",
+      "internal/fs",
+      "codec/json"
+    ]
+  },
+  "type_contract_surface": {
+    "pydantic_models": [],
+    "typescript_interfaces": [
+      {
+        "path": "binding/binding.go",
+        "name": "Binding",
+        "fields": [
+          "Name() string",
+          "Bind(*http.Request, any) error"
+        ]
+      }
+    ],
+    "db_models": [],
+    "idks": [],
+    "stable_types": [],
+    "volatile_types": [],
+    "one_type_trace": {
+      "name": "Binding",
+      "flow": [
+        "binding/binding.go defines Name and Bind",
+        "binding/json.go and other binders implement the contract",
+        "context.go consumes it via BindWith and ShouldBindWith",
+        "binding.Default selects implementations",
+        "context_test.go and docs/doc.md exercise and explain it"
+      ]
+    },
+    "type_definitions": [
+      {
+        "path": "binding/binding.go",
+        "name": "Binding",
+        "kind": "interface",
+        "language": "Go",
+        "fields": [
+          "Name() string",
+          "Bind(*http.Request, any) error"
+        ]
+      },
+      {
+        "path": "binding/binding.go",
+        "name": "BindingBody",
+        "kind": "interface",
+        "language": "Go",
+        "fields": [
+          "Name() string",
+          "BindBody([]byte, any) error"
+        ]
+      }
+    ]
+  },
+  "conventions": {
+    "naming": {
+      "files": "lowercase single-word or compound Go filenames such as logger.go, routergroup.go, test_helpers.go",
+      "classes": "unknown",
+      "functions": "PascalCase exported verb-noun APIs; camelCase unexported helpers; receiver methods for state operations",
+      "branches": "unknown",
+      "commits": "unknown"
+    },
+    "error_handling": {
+      "raise_vs_return": "return",
+      "custom_exceptions": true,
+      "log_then_throw": false
+    },
+    "logging": {
+      "pattern": "[GIN] access logs, [GIN-debug] debug logs, and [Recovery] panic logs with time format 2006/01/02 - 15:04:05",
+      "observed": true
+    },
+    "state_passing": "constructor_injection",
+    "file_size": {
+      "observed_avg": 0,
+      "observed_max": 0
+    },
+    "patterns": [
+      {
+        "name": "middleware-factory-returning-HandlerFunc",
+        "where": "logger.go; recovery.go",
+        "description": "Middleware constructors return HandlerFunc closures."
+      },
+      {
+        "name": "PerformRequest-test-helper",
+        "where": "routes_test.go",
+        "description": "Router tests use a shared HTTP request helper."
+      },
+      {
+        "name": "MIT-header",
+        "where": "logger.go; recovery.go; gin.go",
+        "description": "Go source files use a uniform copyright/license header."
+      }
+    ]
+  },
+  "pitfalls": [
+    {
+      "module": "gin.go trusted-proxy client IP resolution",
+      "what": "Engine.New defaults trustedProxies to all IPv4 and IPv6 CIDRs while forwarded client IP handling is enabled.",
+      "consequence": "Unconfigured applications can accept spoofed X-Forwarded-For/X-Real-IP values, affecting IP-based controls and audit data.",
+      "source_reference": "gin.go:215-226; docs/doc.md:2554-2556",
+      "line_ref": 225
+    },
+    {
+      "module": "response_writer.go status handling",
+      "what": "WriteHeader ignores status changes after headers/body have already been written and emits only a warning.",
+      "consequence": "Handlers cannot surface a late status override as an error; the original response status remains.",
+      "source_reference": "response_writer.go:67-76",
+      "line_ref": 70
+    },
+    {
+      "module": "routergroup.go handler-chain assembly",
+      "what": "combineHandlers rejects chains reaching the abortIndex-derived limit with a panic.",
+      "consequence": "Deeply nested middleware groups can panic during route registration instead of returning a typed error.",
+      "source_reference": "context.go:56-57; routergroup.go:241-248",
+      "line_ref": 243
+    }
+  ],
+  "validation_surface": {
+    "test_command": "make test",
+    "test_runtime_seconds_estimate": 0,
+    "lint_command": "golangci-lint run --verbose via .github/workflows/gin.yml",
+    "typecheck_command": "make vet",
+    "e2e_command": null,
+    "spec_compliance_evidence": [],
+    "severity_taxonomy": [],
+    "per_change_type": {
+      "chore": {
+        "mandatory": [
+          "make fmt-check",
+          "make vet",
+          "make test",
+          "golangci-lint run --verbose"
+        ],
+        "optional": []
+      },
+      "bug": {
+        "mandatory": [
+          "make fmt-check",
+          "make vet",
+          "make test",
+          "golangci-lint run --verbose",
+          "add or update a regression test in *_test.go"
+        ],
+        "optional": []
+      },
+      "feature": {
+        "mandatory": [
+          "make fmt-check",
+          "make vet",
+          "make test with relevant TESTTAGS",
+          "golangci-lint run --verbose",
+          "add unit/integration tests as applicable"
+        ],
+        "optional": []
+      }
+    }
+  },
+  "operational_surface": {
+    "build": {
+      "command": "go build ./...",
+      "recipe_file": "go.mod"
+    },
+    "run": {
+      "command": "go run main.go (consumer quickstart)",
+      "env_vars_required": [],
+      "ports": [
+        8080
+      ],
+      "services": [
+        "consumer-owned HTTP server using gin.Engine"
+      ],
+      "dependencies": [
+        "Go >= 1.25.0"
+      ]
+    },
+    "deploy": {
+      "target": "GitHub releases and pkg.go.dev",
+      "command": "goreleaser release --clean"
+    },
+    "env_vars": [
+      {
+        "name": "PORT",
+        "required": false,
+        "secret": false,
+        "public": true,
+        "per_host": true
+      },
+      {
+        "name": "GIN_MODE",
+        "required": false,
+        "secret": false,
+        "public": true,
+        "per_host": true
+      },
+      {
+        "name": "TERM",
+        "required": false,
+        "secret": false,
+        "public": true,
+        "per_host": false
+      }
+    ],
+    "ci_cd": {
+      "triggers": [
+        "push and pull_request to master",
+        "tag push *",
+        "scheduled CodeQL and Trivy scans"
+      ],
+      "gates": [
+        "make test matrix",
+        "golangci-lint",
+        "gofmt check",
+        "go vet",
+        "Codecov thresholds"
+      ],
+      "artifacts": [
+        "coverage.out",
+        "SARIF scan reports",
+        "release changelog"
+      ]
+    },
+    "git_workflow": {
+      "main_branch": "master",
+      "branch_naming": "not observed",
+      "worktree_pattern": "not observed",
+      "cleanup": "no repository cleanup target observed"
+    },
+    "port_ranges": {
+      "dev": "unknown"
+    },
+    "shutdown_procedure": {
+      "script": null,
+      "commands": []
+    },
+    "spawned_subprocesses": []
+  },
+  "security_surface": {
+    "paths": {
+      "zero_access": [
+        ".env",
+        ".env.*",
+        "secrets.*",
+        "*.pem",
+        "**/*.key",
+        "**/id_rsa*",
+        "~/.ssh/**"
+      ],
+      "read_only": [
+        "go.mod",
+        "go.sum",
+        ".github/workflows/**",
+        ".golangci.yml",
+        "docs/**"
+      ],
+      "no_delete": [
+        ".git/**",
+        ".github/**",
+        "LICENSE",
+        "go.mod",
+        "go.sum"
+      ],
+      "fully_writable": []
+    },
+    "bash_safe_patterns": [],
+    "bash_blocked_patterns": [
+      "rm -rf",
+      "git push --force",
+      "git reset --hard",
+      "sudo",
+      "chmod 777",
+      "curl --upload-file",
+      "nc",
+      "mkfs",
+      "dd of=/dev/"
+    ],
+    "banned_interpreters": [
+      "python",
+      "node",
+      "bash",
+      "sh",
+      "ruby",
+      "perl"
+    ],
+    "env_allowlist": [],
+    "production_credentials": [],
+    "damage_control_rules": [
+      "Do not write credential-like paths (.env, secrets.*, *.pem, *.key).",
+      "Do not expose Authorization values in recovery logs.",
+      "Reject malformed trusted-proxy CIDRs via SetTrustedProxies.",
+      "Treat CodeQL, Trivy, and gosec findings as security gates."
+    ],
+    "security_checklist": {
+      "tools": [
+        "read",
+        "grep",
+        "find",
+        "ls"
+      ],
+      "commands": [
+        "go test",
+        "go vet",
+        "make test",
+        "make fmt-check",
+        "golangci-lint run",
+        "trivy fs scan",
+        "codeql analyze"
+      ],
+      "paths": [
+        "**/*.go",
+        "go.mod",
+        "go.sum",
+        "Makefile",
+        ".github/workflows/**",
+        ".golangci.yml",
+        "docs/**"
+      ],
+      "env": [
+        "GIN_MODE",
+        "PORT",
+        "TERM",
+        "TESTTAGS"
+      ],
+      "blocks": [
+        "writes to .env, secrets.*, *.pem, *.key",
+        "Authorization values in recovery output"
+      ],
+      "logs": [
+        "Recovery sanitized request dump",
+        "Trivy and CodeQL SARIF security reports"
+      ]
+    }
+  },
+  "coverage": {
+    "D1_topography": {
+      "status": "covered",
+      "confidence": "high",
+      "evidence_summary": "go.mod identifies a Go module and README/Makefile identify Gin as a Go HTTP framework with Make-driven repository procedures; tracked metadata also includes Markdown, YAML, JSON, HTML-template, and shell-style configuration surfaces.",
+      "evidence": [
+        {
+          "path": "go.mod",
+          "excerpt": "module github.com/gin-gonic/gin",
+          "kind": "positive"
+        },
+        {
+          "path": "README.md",
+          "excerpt": "Gin is a high-performance HTTP web framework written in Go.",
+          "kind": "positive"
+        },
+        {
+          "path": "Makefile",
+          "excerpt": "GOFILES := $(shell find . -name \"*.go\")",
+          "kind": "positive"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "excerpt": "If your pull request introduces a new feature, document it in [`docs/doc.md`](docs/doc.md), not in the README.",
+          "kind": "positive"
+        }
+      ]
+    },
+    "D2_module_boundaries": {
+      "status": "covered",
+      "confidence": "high",
+      "evidence_summary": "The package graph separates root gin, request binding, response rendering, codecs, internal utilities, and ginS; package-level validator and JSON API variables are shared process state.",
+      "evidence": [
+        {
+          "path": "gin.go",
+          "excerpt": "filesystem \"github.com/gin-gonic/gin/internal/fs\"",
+          "kind": "positive"
+        },
+        {
+          "path": "context.go",
+          "excerpt": "\"github.com/gin-gonic/gin/binding\"",
+          "kind": "positive"
+        },
+        {
+          "path": "render/json.go",
+          "excerpt": "\"github.com/gin-gonic/gin/codec/json\"",
+          "kind": "positive"
+        },
+        {
+          "path": "ginS/gins.go",
+          "excerpt": "\"github.com/gin-gonic/gin\"",
+          "kind": "positive"
+        }
+      ]
+    },
+    "D3_type_contract": {
+      "status": "covered",
+      "confidence": "high",
+      "evidence_summary": "binding.Binding is a real Go interface contract with two methods and an observed flow through concrete binders, Context APIs, factory selection, tests, and documentation.",
+      "evidence": [
+        {
+          "path": "binding/binding.go",
+          "excerpt": "type Binding interface {",
+          "kind": "positive"
+        },
+        {
+          "path": "context.go",
+          "excerpt": "func (c *Context) ShouldBindWith(obj any, b binding.Binding) error {",
+          "kind": "positive"
+        },
+        {
+          "path": "binding/json.go",
+          "excerpt": "type jsonBinding struct{}",
+          "kind": "positive"
+        },
+        {
+          "path": "docs/doc.md",
+          "excerpt": "## Request Binding & Validation",
+          "kind": "positive"
+        }
+      ]
+    },
+    "D4_conventions": {
+      "status": "covered",
+      "confidence": "high",
+      "evidence_summary": "Tracked Go files use lowercase package files, PascalCase exported APIs, camelCase internals, receiver methods, middleware factories returning HandlerFunc, returned errors, and prefixed logging streams.",
+      "evidence": [
+        {
+          "path": "logger.go",
+          "excerpt": "func LoggerWithConfig(conf LoggerConfig) HandlerFunc {",
+          "kind": "positive"
+        },
+        {
+          "path": "recovery.go",
+          "excerpt": "func Recovery() HandlerFunc {",
+          "kind": "positive"
+        },
+        {
+          "path": "errors.go",
+          "excerpt": "func (msg *Error) Unwrap() error { return msg.Err }",
+          "kind": "positive"
+        },
+        {
+          "path": "debug.go",
+          "excerpt": "fmt.Fprintf(DefaultWriter, \"[GIN-debug] \"+format, values...)",
+          "kind": "positive"
+        },
+        {
+          "path": "routes_test.go",
+          "excerpt": "func PerformRequest(r http.Handler, method, path string, headers ...header) *httptest.ResponseRecorder",
+          "kind": "positive"
+        }
+      ]
+    },
+    "D5_pitfalls": {
+      "status": "covered",
+      "confidence": "high",
+      "evidence_summary": "Observed pitfalls include the wide default trusted-proxy CIDRs, silent late status writes, and the hard 63-handler registration limit.",
+      "evidence": [
+        {
+          "path": "gin.go",
+          "excerpt": "trustedProxies = []string{\"0.0.0.0/0\", \"::/0\"}",
+          "kind": "positive"
+        },
+        {
+          "path": "docs/doc.md",
+          "excerpt": "This is NOT safe if your app is behind a reverse proxy.",
+          "kind": "positive"
+        },
+        {
+          "path": "response_writer.go",
+          "excerpt": "Headers were already written",
+          "kind": "positive"
+        },
+        {
+          "path": "routergroup.go",
+          "excerpt": "assert1(\"too many handlers\")",
+          "kind": "positive"
+        }
+      ]
+    },
+    "D6_validation": {
+      "status": "covered",
+      "confidence": "high",
+      "evidence_summary": "Makefile and CI define repository validation: make test, fmt-check, vet, golangci-lint, tag-aware matrix testing, and high Codecov thresholds.",
+      "evidence": [
+        {
+          "path": "Makefile",
+          "excerpt": "test:",
+          "kind": "positive"
+        },
+        {
+          "path": "Makefile",
+          "excerpt": "fmt-check:",
+          "kind": "positive"
+        },
+        {
+          "path": ".github/workflows/gin.yml",
+          "excerpt": "make test",
+          "kind": "positive"
+        },
+        {
+          "path": "codecov.yml",
+          "excerpt": "project:",
+          "kind": "positive"
+        },
+        {
+          "path": ".golangci.yml",
+          "excerpt": "linters:",
+          "kind": "positive"
+        }
+      ]
+    },
+    "D7_operational": {
+      "status": "covered",
+      "confidence": "high",
+      "evidence_summary": "Gin is a Go library rather than a repository-owned service: consumers run applications with go run, Engine.Run defaults to port 8080, and tags invoke GoReleaser with builds skipped.",
+      "evidence": [
+        {
+          "path": "README.md",
+          "excerpt": "go run main.go",
+          "kind": "positive"
+        },
+        {
+          "path": "utils.go",
+          "excerpt": "if addr == \"\" { addr = \":8080\" }",
+          "kind": "positive"
+        },
+        {
+          "path": ".goreleaser.yaml",
+          "excerpt": "skip: true",
+          "kind": "positive"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "excerpt": "Open your pull request against the `master` branch.",
+          "kind": "positive"
+        }
+      ]
+    },
+    "D8_security": {
+      "status": "covered",
+      "confidence": "high",
+      "evidence_summary": "Security-sensitive surfaces include trusted-proxy configuration, Basic Auth constant-time comparison, recovery-log Authorization redaction, zero-access credential path patterns, and CI CodeQL/Trivy/gosec controls.",
+      "evidence": [
+        {
+          "path": "auth.go",
+          "excerpt": "subtle.ConstantTimeCompare",
+          "kind": "positive"
+        },
+        {
+          "path": "recovery.go",
+          "excerpt": "request.Header.Set(\"Authorization\", \"*\")",
+          "kind": "positive"
+        },
+        {
+          "path": "gin.go",
+          "excerpt": "func (engine *Engine) SetTrustedProxies(trustedProxies []string) error {",
+          "kind": "positive"
+        },
+        {
+          "path": ".github/workflows/trivy-scan.yml",
+          "excerpt": "exit-code: \"1\"",
+          "kind": "positive"
+        },
+        {
+          "path": ".gitignore",
+          "excerpt": "*.pem",
+          "kind": "positive"
+        }
+      ]
+    },
+    "D9_process": {
+      "status": "covered",
+      "confidence": "high",
+      "evidence_summary": "The repository documents GitHub issue triage and PR review, requires tests and feature documentation, targets master, and uses CI on push/pull requests plus tag-triggered releases.",
+      "evidence": [
+        {
+          "path": "CONTRIBUTING.md",
+          "excerpt": "Open your pull request against the `master` branch.",
+          "kind": "positive"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "excerpt": "Add or modify tests to cover your code changes.",
+          "kind": "positive"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/bug-report.yaml",
+          "excerpt": "name: Bug Report",
+          "kind": "positive"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/feature-request.yaml",
+          "excerpt": "name: Feature Request",
+          "kind": "positive"
+        },
+        {
+          "path": ".github/PULL_REQUEST_TEMPLATE.md",
+          "excerpt": "All tests pass in available continuous integration systems",
+          "kind": "positive"
+        },
+        {
+          "path": ".github/workflows/goreleaser.yml",
+          "excerpt": "on:",
+          "kind": "positive"
+        }
+      ]
+    },
+    "D10_documentation": {
+      "status": "covered",
+      "confidence": "high",
+      "evidence_summary": "README is a substantial getting-started and feature overview, docs/doc.md is the authoritative quick-start/API guide, and CHANGELOG.md records releases; no separate AI/app/spec documentation surfaces were observed.",
+      "evidence": [
+        {
+          "path": "README.md",
+          "excerpt": "## Getting Started",
+          "kind": "positive"
+        },
+        {
+          "path": "README.md",
+          "excerpt": "## Documentation",
+          "kind": "positive"
+        },
+        {
+          "path": "docs/doc.md",
+          "excerpt": "# Gin Quick Start",
+          "kind": "positive"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "excerpt": "# Changelog",
+          "kind": "positive"
+        },
+        {
+          "path": "AGENTS.md",
+          "excerpt": "No AGENTS.md file observed at repository root.",
+          "kind": "absence"
+        },
+        {
+          "path": "specs/",
+          "excerpt": "No specs directory observed in repository root.",
+          "kind": "absence"
+        }
+      ]
+    }
+  },
+  "open_questions": [],
+  "exploration_log": [
+    {
+      "ts": "2026-08-27T02:10:17.988Z",
+      "action": "draft_bootstrap",
+      "target": ".",
+      "observation": "Created an honest gap-marked map to receive incremental audit evidence."
+    },
+    {
+      "ts": "2026-08-27T02:10:35.372Z",
+      "action": "gap_filler_delta",
+      "target": "D1_topography",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:10:35.376Z",
+      "action": "gap_filler_delta",
+      "target": "D1_topography",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:12:30.545Z",
+      "action": "gap_filler_delta",
+      "target": "D2_module_boundaries",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:12:30.546Z",
+      "action": "gap_filler_delta",
+      "target": "D2_module_boundaries",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:12:38.922Z",
+      "action": "gap_filler_delta",
+      "target": "D3_type_contract",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:12:38.924Z",
+      "action": "gap_filler_delta",
+      "target": "D3_type_contract",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:12:49.119Z",
+      "action": "gap_filler_delta",
+      "target": "D3_type_contract",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:12:49.121Z",
+      "action": "gap_filler_delta",
+      "target": "D3_type_contract",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:12:58.647Z",
+      "action": "gap_filler_delta",
+      "target": "D3_type_contract",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:12:58.649Z",
+      "action": "gap_filler_delta",
+      "target": "D3_type_contract",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:16:20.912Z",
+      "action": "gap_filler_delta",
+      "target": "D4_conventions",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:16:20.914Z",
+      "action": "gap_filler_delta",
+      "target": "D4_conventions",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:17:20.224Z",
+      "action": "gap_filler_delta",
+      "target": "D6_validation",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:17:20.225Z",
+      "action": "gap_filler_delta",
+      "target": "D6_validation",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:17:30.945Z",
+      "action": "gap_filler_delta",
+      "target": "D7_operational",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:17:30.947Z",
+      "action": "gap_filler_delta",
+      "target": "D7_operational",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:17:41.320Z",
+      "action": "gap_filler_delta",
+      "target": "D7_operational",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:17:41.320Z",
+      "action": "gap_filler_delta",
+      "target": "D7_operational",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:20:23.047Z",
+      "action": "gap_filler_delta",
+      "target": "D8_security",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:20:23.049Z",
+      "action": "gap_filler_delta",
+      "target": "D8_security",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:20:44.189Z",
+      "action": "gap_filler_delta",
+      "target": "D9_process",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:20:44.191Z",
+      "action": "gap_filler_delta",
+      "target": "D9_process",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:20:53.193Z",
+      "action": "gap_filler_delta",
+      "target": "D10_documentation",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:20:53.194Z",
+      "action": "gap_filler_delta",
+      "target": "D10_documentation",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:22:26.029Z",
+      "action": "gap_filler_delta",
+      "target": "D5_pitfalls",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:22:26.030Z",
+      "action": "gap_filler_delta",
+      "target": "D5_pitfalls",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:25:01.853Z",
+      "action": "gap_filler_delta",
+      "target": "(no-dim)",
+      "observation": "merged delta from write_map_delta (strategy=append)"
+    },
+    {
+      "ts": "2026-08-27T02:32:49.710Z",
+      "action": "gap_filler_delta",
+      "target": "D1_topography",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:32:49.713Z",
+      "action": "gap_filler_delta",
+      "target": "D1_topography",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:34:14.846Z",
+      "action": "gap_filler_delta",
+      "target": "(no-dim)",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:36:53.320Z",
+      "action": "gap_filler_delta",
+      "target": "(no-dim)",
+      "observation": "merged delta from write_map_delta (strategy=append)"
+    },
+    {
+      "ts": "2026-08-27T02:39:37.920Z",
+      "action": "gap_filler_delta",
+      "target": "(no-dim)",
+      "observation": "merged delta from write_map_delta (strategy=append)"
+    },
+    {
+      "ts": "2026-08-27T02:55:06.472Z",
+      "action": "gap_filler_delta",
+      "target": "(no-dim)",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T02:55:06.476Z",
+      "action": "gap_filler_delta",
+      "target": "(no-dim)",
+      "observation": "merged delta from write_map_delta (strategy=deep_merge)"
+    },
+    {
+      "ts": "2026-08-27T02:57:45.381Z",
+      "action": "gap_filler_delta",
+      "target": "(no-dim)",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T03:00:21.664Z",
+      "action": "gap_filler_delta",
+      "target": "(no-dim)",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T03:02:43.146Z",
+      "action": "gap_filler_delta",
+      "target": "(no-dim)",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    },
+    {
+      "ts": "2026-08-27T03:05:15.397Z",
+      "action": "gap_filler_delta",
+      "target": "(no-dim)",
+      "observation": "merged delta from write_map_delta (strategy=append)"
+    },
+    {
+      "ts": "2026-08-27T03:08:38.939Z",
+      "action": "gap_filler_delta",
+      "target": "(no-dim)",
+      "observation": "merged delta from write_map_delta (strategy=shallow_overwrite)"
+    }
+  ],
+  "schema_version": "1",
+  "generated_at": "2026-08-27T02:10:17.988Z",
+  "concern_evidence": {
+    "concerns": [
+      {
+        "concern": "Pluggable JSON codec via build-tag-selected backends",
+        "one_line": "The codec/json Core seam selects one JSON backend at build time and routes JSON binding, rendering, form coercion, and error marshaling through a mutable package API.",
+        "covers": "codec/json interfaces, build-tag backends, decoder facade, and downstream JSON consumers.",
+        "excludes": "Non-JSON codecs, external dependency internals, and ginS.",
+        "flows": [
+          {
+            "name": "JSON decode through selected backend",
+            "description": "Binding reaches the active backend and validation.",
+            "steps": [
+              {
+                "path": "context.go",
+                "what_happens": "BindJSON and MustBindWith enter binding.JSON."
+              },
+              {
+                "path": "binding/json.go",
+                "what_happens": "decodeJSON obtains json.API.NewDecoder, applies decoder flags, decodes, and validates."
+              },
+              {
+                "path": "codec/json/api.go",
+                "what_happens": "Core and Decoder define the swap contract."
+              },
+              {
+                "path": "codec/json/json.go",
+                "what_happens": "The default build-tag backend initializes API."
+              }
+            ]
+          },
+          {
+            "name": "JSON encode and runtime swap",
+            "description": "Renderers and errors use the same API seam.",
+            "steps": [
+              {
+                "path": "render/json.go",
+                "what_happens": "JSON renderers call API marshal and encoder methods."
+              },
+              {
+                "path": "errors.go",
+                "what_happens": "Error envelopes marshal through API.Marshal."
+              },
+              {
+                "path": "binding/json_test.go",
+                "what_happens": "The custom codec test swaps API and exercises decode and encode."
+              }
+            ]
+          }
+        ],
+        "touchpoints": [
+          {
+            "path": "codec/json/api.go",
+            "symbol": "Core/Encoder/Decoder/API",
+            "role": "Core JSON adapter contract.",
+            "line_range": [
+              11,
+              50
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "codec/json/json.go",
+            "symbol": "jsonApi/init",
+            "role": "Default backend.",
+            "line_range": [
+              5,
+              44
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "codec/json/jsoniter.go",
+            "symbol": "jsoniterApi/init",
+            "role": "jsoniter backend.",
+            "line_range": [
+              5,
+              44
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "codec/json/go_json.go",
+            "symbol": "gojsonApi/init",
+            "role": "go_json backend.",
+            "line_range": [
+              5,
+              44
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "codec/json/sonic.go",
+            "symbol": "sonicApi/init",
+            "role": "sonic backend.",
+            "line_range": [
+              5,
+              44
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "binding/json.go",
+            "symbol": "decodeJSON",
+            "role": "Decoder consumer.",
+            "line_range": [
+              17,
+              54
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "render/json.go",
+            "symbol": "WriteJSON and JSON-family Render",
+            "role": "Marshal consumers.",
+            "line_range": [
+              60,
+              192
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "binding/form_mapping.go",
+            "symbol": "setWithProperType",
+            "role": "Form-to-JSON coercion.",
+            "line_range": [
+              373,
+              379
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "errors.go",
+            "symbol": "Error.MarshalJSON/errorMsgs.MarshalJSON",
+            "role": "Error JSON consumers.",
+            "line_range": [
+              76,
+              159
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "mode.go",
+            "symbol": "EnableJsonDecoderUseNumber/EnableJsonDecoderDisallowUnknownFields",
+            "role": "Decoder option facade.",
+            "line_range": [
+              83,
+              96
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "binding/json_test.go",
+            "symbol": "TestCustomJsonCodec",
+            "role": "Custom API integration test.",
+            "line_range": [
+              38,
+              105
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "errors_test.go",
+            "symbol": "TestError/TestErrorSlice",
+            "role": "Error JSON tests.",
+            "line_range": [
+              15,
+              113
+            ],
+            "centrality": "peripheral"
+          },
+          {
+            "path": "mode_test.go",
+            "symbol": "TestEnableJsonDecoder*",
+            "role": "Decoder toggle tests.",
+            "line_range": [
+              52,
+              61
+            ],
+            "centrality": "peripheral"
+          },
+          {
+            "path": "binding/form_mapping_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "context_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "context.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          }
+        ],
+        "invariants": [
+          {
+            "rule": "The selected backend satisfies Core and initializes API before consumers use it.",
+            "why": "Consumers read API without a nil check.",
+            "reference": "codec/json/api.go"
+          },
+          {
+            "rule": "Backend build tags select one implementation.",
+            "why": "Each backend assigns the same API global.",
+            "reference": "codec/json/json.go"
+          },
+          {
+            "rule": "Custom API implementations preserve Core, Encoder, and Decoder methods.",
+            "why": "All shipped backends and the swap test depend on them.",
+            "reference": "binding/json_test.go"
+          }
+        ],
+        "pitfalls": [
+          {
+            "risk": "Reassigning json.API while serving requests.",
+            "consequence": "Interface reads can race.",
+            "reference": "codec/json/api.go"
+          },
+          {
+            "risk": "Adding a Core method without updating every backend.",
+            "consequence": "Tagged builds fail.",
+            "reference": "codec/json/api.go"
+          },
+          {
+            "risk": "Assuming MaxBytesError behavior is identical across backends.",
+            "consequence": "Binding status can differ by tag.",
+            "reference": "context.go"
+          }
+        ],
+        "entry_questions": [
+          "Which tag is active?",
+          "Does a Core change update every backend?",
+          "Is API swapped during serving?"
+        ],
+        "validation": [
+          "go test ./binding/... -run TestCustomJsonCodec",
+          "go build -tags jsoniter",
+          "go build -tags go_json",
+          "go build -tags 'sonic,linux'"
+        ],
+        "spans_subtrees": [
+          "codec/json",
+          "binding",
+          "render",
+          "errors.go",
+          "mode.go"
+        ],
+        "stability": "medium",
+        "recurrence": "high",
+        "confidence": "high",
+        "last_updated": "2026-08-27T00:00:00Z"
+      },
+      {
+        "concern": "HTTP route tree and request dispatch",
+        "one_line": "Owns route registration into per-method radix trees and request-time matching, parameter extraction, handler selection, and redirect/error fallback.",
+        "covers": "Engine registration and ServeHTTP dispatch, RouterGroup path composition, trie insertion/lookup, and route helper tests.",
+        "excludes": "Middleware semantics, static-file internals, trusted-proxy extraction, renderer implementations, and listener lifecycle.",
+        "flows": [
+          {
+            "name": "Route registration",
+            "description": "Verbs compose paths and handlers before attaching them to a method trie.",
+            "steps": [
+              {
+                "path": "routergroup.go",
+                "what_happens": "RouterGroup verbs calculate absolute paths and combine handlers."
+              },
+              {
+                "path": "gin.go",
+                "what_happens": "Engine.addRoute validates inputs and sizes pooled context buffers."
+              },
+              {
+                "path": "tree.go",
+                "what_happens": "node.addRoute splits prefixes and inserts static, parameter, or catch-all nodes."
+              },
+              {
+                "path": "utils.go",
+                "what_happens": "joinPaths and safeUint16 support path composition and sizing."
+              }
+            ]
+          },
+          {
+            "name": "Request dispatch and fallback",
+            "description": "The engine resolves a URL and runs the handler or miss fallback.",
+            "steps": [
+              {
+                "path": "gin.go",
+                "what_happens": "ServeHTTP resets a pooled Context and calls handleHTTPRequest."
+              },
+              {
+                "path": "tree.go",
+                "what_happens": "node.getValue walks edges and returns handlers, Params, fullPath, and TSR hints."
+              },
+              {
+                "path": "gin.go",
+                "what_happens": "handleHTTPRequest chooses redirect, 405, or 404 behavior."
+              },
+              {
+                "path": "gin_test.go",
+                "what_happens": "Engine tests pin redirects, registration failures, re-entry, literal-colon updates, and route listing."
+              }
+            ]
+          }
+        ],
+        "touchpoints": [
+          {
+            "path": "gin.go",
+            "symbol": "Engine.addRoute/ServeHTTP/handleHTTPRequest/HandleContext",
+            "role": "Core routing orchestration and fallbacks.",
+            "line_range": [
+              350,
+              832
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "tree.go",
+            "symbol": "node.addRoute/node.getValue/insertChild",
+            "role": "Core radix-tree matcher.",
+            "line_range": [
+              1,
+              814
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "routergroup.go",
+            "symbol": "RouterGroup.handle/calculateAbsolutePath/combineHandlers",
+            "role": "Path and handler-chain construction.",
+            "line_range": [
+              40,
+              195
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "utils.go",
+            "symbol": "joinPaths/nameOfFunction/assert1/safeUint16",
+            "role": "Routing support helpers.",
+            "line_range": [
+              80,
+              180
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "gin_test.go",
+            "symbol": "TestAddRoute/TestRoute*/TestEngineHandleContext/TestLiteralColon",
+            "role": "Engine dispatch tests.",
+            "line_range": [
+              400,
+              770
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "tree_test.go",
+            "symbol": "TestTreeAddAndGet/TestTreeWildcard/TestTreeFindCaseInsensitivePath",
+            "role": "Trie and wildcard tests.",
+            "line_range": [
+              1,
+              1100
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "utils_test.go",
+            "symbol": "TestJoinPaths/TestFunctionName/TestSafeUint16",
+            "role": "Helper tests.",
+            "line_range": [
+              70,
+              200
+            ],
+            "centrality": "peripheral"
+          },
+          {
+            "path": "routergroup_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          }
+        ],
+        "invariants": [
+          {
+            "rule": "The wildcard child remains final and node priority accounts for descendants and its own handler.",
+            "why": "Lookup and priority reordering rely on this convention.",
+            "reference": "tree.go"
+          },
+          {
+            "rule": "Registration precedes serving and is not concurrency-safe.",
+            "why": "Trie mutation and one-shot route updates are unprotected.",
+            "reference": "gin.go"
+          },
+          {
+            "rule": "Fallback order is trailing-slash, fixed-path, method-not-allowed, then not-found.",
+            "why": "The order is externally visible.",
+            "reference": "gin.go"
+          },
+          {
+            "rule": "UseEscapedPath overrides UseRawPath and affects parameter unescaping.",
+            "why": "The engine chooses path representation before lookup.",
+            "reference": "gin.go"
+          }
+        ],
+        "pitfalls": [
+          {
+            "risk": "Registering literal-colon routes after the one-shot route update.",
+            "consequence": "New escaped paths can fail to match.",
+            "reference": "gin.go"
+          },
+          {
+            "risk": "Changing wildcard ordering or skipped-node rollback.",
+            "consequence": "Greedy parameters can shadow static routes.",
+            "reference": "tree.go"
+          },
+          {
+            "risk": "Changing joinPaths or safeUint16 without updating pool assumptions.",
+            "consequence": "Nested paths or parameter buffers become incorrect.",
+            "reference": "utils.go"
+          }
+        ],
+        "entry_questions": [
+          "Is this registration or dispatch?",
+          "Does the path introduce wildcard, escaped-colon, raw-path, or extra-slash behavior?",
+          "Which fallback should win?"
+        ],
+        "validation": [
+          "go test -run 'TestTree' ./...",
+          "go test -run 'TestRoute|TestRouter|TestListOfRoutes|TestEngineHandle|TestAddRoute|TestMethodNotAllowed|TestLiteralColon' ./...",
+          "go test -run 'TestJoinPaths|TestFunctionName|TestSafeUint16' ./..."
+        ],
+        "spans_subtrees": [
+          "tree.go",
+          "gin.go",
+          "routergroup.go",
+          "utils.go"
+        ],
+        "stability": "high",
+        "recurrence": "high",
+        "confidence": "high",
+        "last_updated": "2026-08-27T00:00:00Z"
+      },
+      {
+        "concern": "HTTP response writer and Reader rendering contract",
+        "one_line": "Owns staged response status and size, header commitment, interface delegation, and render.Reader header/body copying.",
+        "covers": "ResponseWriter and Reader behavior through Context/Gin integration and tests.",
+        "excludes": "Routing, handler composition, logging/recovery, template/JSON serialization internals, and listener setup.",
+        "flows": [
+          {
+            "name": "DataFromReader response",
+            "description": "A reader response stages status, writes headers, commits on body copy, and is finalized by the engine.",
+            "steps": [
+              {
+                "path": "context.go",
+                "what_happens": "DataFromReader constructs render.Reader and calls Render."
+              },
+              {
+                "path": "render/reader.go",
+                "what_happens": "Reader.Render writes Content-Type and missing headers, adds Content-Length, and calls io.Copy."
+              },
+              {
+                "path": "response_writer.go",
+                "what_happens": "responseWriter.Write commits headers before forwarding bytes and increments size."
+              },
+              {
+                "path": "gin.go",
+                "what_happens": "handleHTTPRequest performs final WriteHeaderNow for empty responses."
+              }
+            ]
+          },
+          {
+            "name": "Hijack and streaming lifecycle",
+            "description": "The wrapper preserves safe fallbacks and header-before-body behavior.",
+            "steps": [
+              {
+                "path": "response_writer.go",
+                "what_happens": "Hijack rejects body-written responses and delegates or returns ErrNotSupported."
+              },
+              {
+                "path": "response_writer_test.go",
+                "what_happens": "Tests pin status, size, flush, and hijack transitions."
+              },
+              {
+                "path": "render/reader.go",
+                "what_happens": "writeHeaders preserves existing header overrides."
+              },
+              {
+                "path": "render/reader_test.go",
+                "what_happens": "Reader rendering succeeds without an optional Headers map."
+              }
+            ]
+          }
+        ],
+        "touchpoints": [
+          {
+            "path": "response_writer.go",
+            "symbol": "ResponseWriter/responseWriter",
+            "role": "Core writer state machine and interface.",
+            "line_range": [
+              19,
+              164
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "render/reader.go",
+            "symbol": "Reader.Render/WriteContentType/writeHeaders",
+            "role": "Core streaming renderer.",
+            "line_range": [
+              12,
+              50
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "context.go",
+            "symbol": "Context.Render/DataFromReader/writermem",
+            "role": "Writer and Reader integration.",
+            "line_range": [
+              62,
+              1300
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "gin.go",
+            "symbol": "Engine.ServeHTTP/handleHTTPRequest",
+            "role": "Writer reset and final commit.",
+            "line_range": [
+              660,
+              832
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "response_writer_test.go",
+            "symbol": "TestResponseWriter*",
+            "role": "Writer contract tests.",
+            "line_range": [
+              18,
+              280
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "render/reader_test.go",
+            "symbol": "TestReaderRenderNoHeaders",
+            "role": "Reader edge-case test.",
+            "line_range": [
+              14,
+              23
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "context_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "gin_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          }
+        ],
+        "invariants": [
+          {
+            "rule": "WriteHeader stages status and WriteHeaderNow commits once; body writes and Flush commit first.",
+            "why": "Renderers need a header window after status staging.",
+            "reference": "response_writer.go"
+          },
+          {
+            "rule": "Reader emits Content-Length only for non-negative lengths and only fills absent headers.",
+            "why": "Unknown lengths remain unset and overrides survive.",
+            "reference": "render/reader.go"
+          },
+          {
+            "rule": "Hijack is allowed before body bytes and unsupported writers return ErrNotSupported.",
+            "why": "This preserves websocket compatibility and normal fallback.",
+            "reference": "response_writer.go"
+          }
+        ],
+        "pitfalls": [
+          {
+            "risk": "Treating Status as an immediate commit.",
+            "consequence": "Header ordering becomes incorrect.",
+            "reference": "response_writer.go"
+          },
+          {
+            "risk": "Reusing Reader.Headers across renders.",
+            "consequence": "Content-Length mutation can race.",
+            "reference": "render/reader.go"
+          },
+          {
+            "risk": "Assuming every writer supports Hijacker or Flusher.",
+            "consequence": "Streaming or fallback behavior changes.",
+            "reference": "response_writer.go"
+          }
+        ],
+        "entry_questions": [
+          "Does the change occur before final WriteHeaderNow?",
+          "Is content length known?",
+          "Can the writer lack Hijacker or Flusher?"
+        ],
+        "validation": [
+          "go test ./... -run 'TestResponseWriter|TestReaderRender|TestContextRenderDataFromReader'",
+          "go test ./... -run TestRenderDataContentLength"
+        ],
+        "spans_subtrees": [
+          "response_writer.go",
+          "render/reader.go",
+          "context.go",
+          "gin.go"
+        ],
+        "stability": "high",
+        "recurrence": "high",
+        "confidence": "high",
+        "last_updated": "2026-08-27T00:00:00Z"
+      },
+      {
+        "concern": "Middleware diagnostics and panic recovery",
+        "one_line": "Owns debug-print gating, access-log formatting, panic recovery, broken-pipe handling, and Authorization redaction across built-in middleware.",
+        "covers": "Debug hooks, Logger constructors/formatters/skips, Recovery handlers/request dumps, and exact tests.",
+        "excludes": "Context handler-chain/error storage mechanics, route-trie correctness, authentication policy, and listener lifecycle.",
+        "flows": [
+          {
+            "name": "Default middleware observability",
+            "description": "Default wires Logger and Recovery and Logger observes the post-handler response.",
+            "steps": [
+              {
+                "path": "gin.go",
+                "what_happens": "Default creates New and attaches Logger before Recovery."
+              },
+              {
+                "path": "debug.go",
+                "what_happens": "IsDebugging gates warnings, route/template diagnostics, and hooks."
+              },
+              {
+                "path": "logger.go",
+                "what_happens": "Logger times c.Next and formats status, latency, client IP, errors, keys, and body size."
+              },
+              {
+                "path": "logger_test.go",
+                "what_happens": "Tests cover constructors, formatting, colors, skips, query suppression, and ErrorLogger."
+              }
+            ]
+          },
+          {
+            "name": "Panic safety and sanitized diagnostics",
+            "description": "Recovery classifies panics and masks Authorization in diagnostics.",
+            "steps": [
+              {
+                "path": "recovery.go",
+                "what_happens": "Recovery defers recover around c.Next and classifies broken-pipe sentinels."
+              },
+              {
+                "path": "recovery.go",
+                "what_happens": "Normal panics log and invoke recovery; broken pipes record and abort without status."
+              },
+              {
+                "path": "debug.go",
+                "what_happens": "The debug gate controls recovery diagnostic detail."
+              },
+              {
+                "path": "recovery_test.go",
+                "what_happens": "Tests pin 500/custom recovery, broken pipes, dumps, stack helpers, and masking."
+              }
+            ]
+          },
+          {
+            "name": "Debug lifecycle diagnostics",
+            "description": "Route/template lifecycle events share the mode-gated diagnostic pipeline.",
+            "steps": [
+              {
+                "path": "gin.go",
+                "what_happens": "Route registration and template loading invoke debug helpers."
+              },
+              {
+                "path": "debug.go",
+                "what_happens": "debugPrint selects the hook or [GIN-debug] output."
+              },
+              {
+                "path": "debug_test.go",
+                "what_happens": "Tests assert non-debug silence, hooks, warnings, route/template output, and capture."
+              }
+            ]
+          }
+        ],
+        "touchpoints": [
+          {
+            "path": "debug.go",
+            "symbol": "IsDebugging/debugPrint*",
+            "role": "Core diagnostic gate and hooks.",
+            "line_range": [
+              17,
+              113
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "logger.go",
+            "symbol": "LoggerWithConfig/defaultLogFormatter/ErrorLoggerT",
+            "role": "Core access logging.",
+            "line_range": [
+              50,
+              311
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "recovery.go",
+            "symbol": "RecoveryWithWriter/CustomRecoveryWithWriter/secureRequestDump/stack",
+            "role": "Core recovery and credential redaction.",
+            "line_range": [
+              30,
+              159
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "gin.go",
+            "symbol": "Default/New/addRoute/LoadHTML*/SetHTMLTemplate",
+            "role": "Diagnostic wiring and lifecycle calls.",
+            "line_range": [
+              201,
+              314
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "debug_test.go",
+            "symbol": "TestDebugPrint*",
+            "role": "Debug tests.",
+            "line_range": [
+              16,
+              192
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "logger_test.go",
+            "symbol": "TestLogger*/TestDefaultLogFormatter",
+            "role": "Logger tests.",
+            "line_range": [
+              22,
+              489
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "recovery_test.go",
+            "symbol": "TestPanic*/TestSecureRequestDump",
+            "role": "Recovery tests.",
+            "line_range": [
+              12,
+              360
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "gin_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          }
+        ],
+        "invariants": [
+          {
+            "rule": "Logger captures path before c.Next and status/errors/body state after it; Default installs Logger before Recovery.",
+            "why": "The log must see the recovered final status.",
+            "reference": "logger.go"
+          },
+          {
+            "rule": "Recovery treats EPIPE, ECONNRESET, and http.ErrAbortHandler as broken pipes without writing status.",
+            "why": "A dead client cannot receive a 500.",
+            "reference": "recovery.go"
+          },
+          {
+            "rule": "secureRequestDump masks Authorization lines and debugPrint is silent outside debug mode.",
+            "why": "Diagnostics avoid credential leakage and release noise.",
+            "reference": "recovery.go"
+          }
+        ],
+        "pitfalls": [
+          {
+            "risk": "Reordering Logger and Recovery.",
+            "consequence": "Access logs can record the wrong panic status.",
+            "reference": "gin.go"
+          },
+          {
+            "risk": "Handling broken pipes as ordinary panics.",
+            "consequence": "Recovery attempts a dead-socket write.",
+            "reference": "recovery.go"
+          },
+          {
+            "risk": "Treating SkipPaths as prefix matches.",
+            "consequence": "Variants continue to be logged.",
+            "reference": "logger.go"
+          }
+        ],
+        "entry_questions": [
+          "Does middleware ordering remain Logger around Recovery?",
+          "Can the panic be a broken-pipe sentinel?",
+          "Must the diagnostic remain silent outside debug mode?"
+        ],
+        "validation": [
+          "go test ./...",
+          "go test -run 'TestPanicInHandler|TestPanicClean|TestPanicWithBrokenPipe|TestSecureRequestDump' ./...",
+          "go test -run 'TestLogger|TestDefaultLogFormatter|TestLoggerWithConfigFormatting' ./..."
+        ],
+        "spans_subtrees": [
+          "debug.go",
+          "logger.go",
+          "recovery.go",
+          "gin.go",
+          "mode.go",
+          "context.go"
+        ],
+        "stability": "high",
+        "recurrence": "high",
+        "confidence": "high",
+        "last_updated": "2026-08-27T00:00:00Z"
+      },
+      {
+        "concern": "HTTP Basic authentication middleware",
+        "one_line": "Precomputes Basic credentials, compares authorization values in constant time, and stores the principal or aborts with the correct origin/proxy challenge.",
+        "covers": "Account preprocessing, Base64 construction, matching, context keys, challenge headers, and 401/407 behavior.",
+        "excludes": "Authorization policy, sessions/cookies/CSRF, Bearer/JWT, request-body binding, and client certificates.",
+        "flows": [
+          {
+            "name": "Origin match or 401",
+            "description": "Configured accounts become a credential table and requests receive a user key or are stopped.",
+            "steps": [
+              {
+                "path": "auth.go",
+                "what_happens": "BasicAuth normalizes realm and delegates to processAccounts."
+              },
+              {
+                "path": "auth.go",
+                "what_happens": "processAccounts validates accounts and precomputes encoded credentials."
+              },
+              {
+                "path": "auth.go",
+                "what_happens": "The handler reads Authorization and uses ConstantTimeCompare."
+              },
+              {
+                "path": "context.go",
+                "what_happens": "Success sets AuthUserKey; failure sets WWW-Authenticate and aborts with 401."
+              },
+              {
+                "path": "auth_test.go",
+                "what_happens": "Tests cover encoding, exact rejection, success storage, realm quoting, and chain stopping."
+              }
+            ]
+          },
+          {
+            "name": "Proxy match or 407",
+            "description": "The proxy variant uses a distinct header, key, challenge, and status.",
+            "steps": [
+              {
+                "path": "auth.go",
+                "what_happens": "BasicAuthForProxy selects its realm and captures processed pairs."
+              },
+              {
+                "path": "auth.go",
+                "what_happens": "Its handler compares Proxy-Authorization and stores AuthProxyUserKey."
+              },
+              {
+                "path": "context.go",
+                "what_happens": "Failure sets Proxy-Authenticate and aborts with 407."
+              },
+              {
+                "path": "auth_test.go",
+                "what_happens": "Proxy success and 407 tests verify the separate contract."
+              }
+            ]
+          }
+        ],
+        "touchpoints": [
+          {
+            "path": "auth.go",
+            "symbol": "Accounts/processAccounts/authorizationHeader",
+            "role": "Core account and credential construction.",
+            "line_range": [
+              17,
+              95
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "auth.go",
+            "symbol": "authPairs.searchCredential/BasicAuthForRealm/BasicAuthForProxy",
+            "role": "Core matching and enforcement.",
+            "line_range": [
+              29,
+              115
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "context.go",
+            "symbol": "requestHeader/Set/AbortWithStatus",
+            "role": "Header, storage, and abort support.",
+            "line_range": [
+              217,
+              314
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "auth_test.go",
+            "symbol": "TestBasicAuth*",
+            "role": "Authentication contract tests.",
+            "line_range": [
+              12,
+              190
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "context_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          }
+        ],
+        "invariants": [
+          {
+            "rule": "Empty account sets or usernames panic during middleware construction.",
+            "why": "Misconfiguration is surfaced before serving.",
+            "reference": "auth.go"
+          },
+          {
+            "rule": "Matching compares complete encoded values with ConstantTimeCompare.",
+            "why": "Exact matching prevents false authorization.",
+            "reference": "auth_test.go"
+          },
+          {
+            "rule": "Failure aborts the chain and emits its challenge/status pair.",
+            "why": "Unauthenticated handlers must not execute.",
+            "reference": "auth.go"
+          },
+          {
+            "rule": "Success exposes the principal through AuthUserKey or AuthProxyUserKey.",
+            "why": "Those keys are the downstream contract.",
+            "reference": "auth.go"
+          }
+        ],
+        "pitfalls": [
+          {
+            "risk": "Mutating Accounts after installing middleware.",
+            "consequence": "Captured pairs do not reflect runtime rotations.",
+            "reference": "auth.go"
+          },
+          {
+            "risk": "Treating an authenticated key as authorization.",
+            "consequence": "Identity is accepted without route-specific permission checks.",
+            "reference": "auth.go"
+          },
+          {
+            "risk": "Changing realm quoting or using prefix matching.",
+            "consequence": "Challenge or exact rejection behavior drifts.",
+            "reference": "auth_test.go"
+          }
+        ],
+        "entry_questions": [
+          "Is this origin or proxy authentication?",
+          "Will accounts or realms change after middleware creation?",
+          "Does downstream code distinguish identity from authorization?"
+        ],
+        "validation": [
+          "go test -run BasicAuth ./..."
+        ],
+        "spans_subtrees": [
+          "auth.go",
+          "auth_test.go",
+          "context.go"
+        ],
+        "stability": "high",
+        "recurrence": "low",
+        "confidence": "high",
+        "last_updated": "2026-08-27T00:00:00Z"
+      },
+      {
+        "concern": "Zero-allocation string/byte conversion",
+        "one_line": "Owns the unsafe-backed StringToBytes and BytesToString boundary and the aliasing contract relied on by hot-path callers.",
+        "covers": "Internal helpers, round-trip tests/benchmarks, and routing, authentication, and recovery call sites that depend on no-copy conversion.",
+        "excludes": "Routing correctness, authentication policy, JSON correctness, and renderer semantics beyond the byte/string boundary.",
+        "flows": [
+          {
+            "name": "Conversion provider to callers",
+            "description": "The helper creates alias views consumed at byte/string boundaries.",
+            "steps": [
+              {
+                "path": "internal/bytesconv/bytesconv.go",
+                "what_happens": "StringToBytes and BytesToString reinterpret source memory with unsafe while preserving length."
+              },
+              {
+                "path": "auth.go",
+                "what_happens": "Authentication converts credentials for ConstantTimeCompare."
+              },
+              {
+                "path": "tree.go",
+                "what_happens": "Trie insertion and lookup cross the string/byte boundary for indices."
+              },
+              {
+                "path": "recovery.go",
+                "what_happens": "Request-dump bytes become a string for Authorization masking."
+              }
+            ]
+          },
+          {
+            "name": "Allocation validation",
+            "description": "Behavioral tests and benchmarks compare the helper with allocating conversions.",
+            "steps": [
+              {
+                "path": "internal/bytesconv/bytesconv_test.go",
+                "what_happens": "Random-data and nil/empty tests pin both directions."
+              },
+              {
+                "path": "internal/bytesconv/bytesconv_test.go",
+                "what_happens": "Raw and helper benchmarks expose allocation regressions."
+              },
+              {
+                "path": "go.mod",
+                "what_happens": "The Go directive supports the unsafe string/slice APIs."
+              }
+            ]
+          }
+        ],
+        "touchpoints": [
+          {
+            "path": "internal/bytesconv/bytesconv.go",
+            "symbol": "StringToBytes/BytesToString",
+            "role": "Core unsafe conversion provider.",
+            "line_range": [
+              9,
+              24
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "internal/bytesconv/bytesconv_test.go",
+            "symbol": "TestBytesToString/TestStringToBytes/BenchmarkBytesConv*",
+            "role": "Round-trip, empty-input, and allocation tests.",
+            "line_range": [
+              20,
+              132
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "auth.go",
+            "symbol": "searchCredential/authorizationHeader",
+            "role": "Authentication caller.",
+            "line_range": [
+              29,
+              95
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "tree.go",
+            "symbol": "node index conversion sites",
+            "role": "Trie caller.",
+            "line_range": [
+              170,
+              210
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "recovery.go",
+            "symbol": "secureRequestDump",
+            "role": "Request-dump caller.",
+            "line_range": [
+              94,
+              108
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "go.mod",
+            "symbol": "go directive",
+            "role": "Toolchain contract.",
+            "line_range": [
+              3,
+              3
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "auth_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "recovery_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "tree_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          }
+        ],
+        "invariants": [
+          {
+            "rule": "Returned values alias source memory and must not be mutated or retained beyond its lifetime.",
+            "why": "The helpers deliberately avoid copying.",
+            "reference": "internal/bytesconv/bytesconv.go"
+          },
+          {
+            "rule": "Returned lengths equal source lengths, including nil and empty inputs.",
+            "why": "Length is part of the unsafe view and is tested.",
+            "reference": "internal/bytesconv/bytesconv_test.go"
+          },
+          {
+            "rule": "Callers preserve aliasing without mutating returned views.",
+            "why": "Auth, trie, and request-dump paths depend on no-copy behavior.",
+            "reference": "tree.go"
+          }
+        ],
+        "pitfalls": [
+          {
+            "risk": "Writing through StringToBytes or retaining BytesToString over pooled storage.",
+            "consequence": "Source data can be corrupted or recycled memory observed.",
+            "reference": "internal/bytesconv/bytesconv.go"
+          },
+          {
+            "risk": "Replacing a helper call with an allocating conversion.",
+            "consequence": "Hot-path allocations regress.",
+            "reference": "internal/bytesconv/bytesconv_test.go"
+          },
+          {
+            "risk": "Using an older toolchain than go.mod.",
+            "consequence": "Unsafe APIs do not compile.",
+            "reference": "go.mod"
+          }
+        ],
+        "entry_questions": [
+          "Can source memory be mutated or reused?",
+          "Does a hot path require no allocation?",
+          "Is the toolchain compatible?"
+        ],
+        "validation": [
+          "go test ./internal/bytesconv/...",
+          "go test -run=none -bench=^BenchmarkBytesConv -benchmem=true",
+          "go test ./..."
+        ],
+        "spans_subtrees": [
+          "internal/bytesconv",
+          "auth.go",
+          "tree.go",
+          "recovery.go",
+          "render",
+          "binding"
+        ],
+        "stability": "high",
+        "recurrence": "high",
+        "confidence": "high",
+        "last_updated": "2026-08-27T00:00:00Z"
+      },
+      {
+        "concern": "Public API compatibility and convenience wrappers",
+        "one_line": "Owns the deprecated BindWith forwarding contract and the ginS package-level facade that lazily forwards calls to one default Engine.",
+        "covers": "BindWith migration logging and forwarding, legacy Engine.AppEngine compatibility, ginS sync.OnceValue state, wrapper forwarding, and tests.",
+        "excludes": "Binding implementation semantics, route-trie mechanics, general lifecycle, middleware behavior, and authentication.",
+        "flows": [
+          {
+            "name": "Deprecated BindWith forwarding",
+            "description": "The legacy API logs guidance and forwards into the current explicit-binding path.",
+            "steps": [
+              {
+                "path": "deprecated.go",
+                "what_happens": "Context.BindWith logs the issue-662 notice and calls MustBindWith."
+              },
+              {
+                "path": "context.go",
+                "what_happens": "MustBindWith delegates to ShouldBindWith and invokes the supplied Binding."
+              },
+              {
+                "path": "binding/binding.go",
+                "what_happens": "The selected Binding receives the request and destination."
+              },
+              {
+                "path": "deprecated_test.go",
+                "what_happens": "TestBindWith captures the notice and verifies Form results."
+              }
+            ]
+          },
+          {
+            "name": "ginS lazy facade forwarding",
+            "description": "Package helpers share one lazily created gin.Default Engine and forward calls to it.",
+            "steps": [
+              {
+                "path": "ginS/gins.go",
+                "what_happens": "sync.OnceValue creates one gin.Default Engine on first use."
+              },
+              {
+                "path": "ginS/gins.go",
+                "what_happens": "GET, POST, Use, NoRoute, Static, and Run call engine().X."
+              },
+              {
+                "path": "gin.go",
+                "what_happens": "The target Engine and embedded RouterGroup implement forwarded operations."
+              },
+              {
+                "path": "ginS/gins_test.go",
+                "what_happens": "Wrapper tests register routes and serve requests through the cached engine."
+              }
+            ]
+          }
+        ],
+        "touchpoints": [
+          {
+            "path": "deprecated.go",
+            "symbol": "Context.BindWith",
+            "role": "Core deprecated shim and migration notice.",
+            "line_range": [
+              16,
+              26
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "deprecated_test.go",
+            "symbol": "TestBindWith",
+            "role": "Deprecation forwarding test.",
+            "line_range": [
+              12,
+              32
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "ginS/gins.go",
+            "symbol": "engine and package-level wrappers",
+            "role": "Core lazy facade and forwarding surface.",
+            "line_range": [
+              14,
+              169
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "ginS/gins_test.go",
+            "symbol": "TestGET/TestPOST/TestGroup/TestUse/TestNoRoute/TestStatic*",
+            "role": "Wrapper integration tests.",
+            "line_range": [
+              18,
+              233
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "gin.go",
+            "symbol": "Engine/New/Default/Use/Run*/ServeHTTP",
+            "role": "Forward target Engine surface.",
+            "line_range": [
+              109,
+              220
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "context.go",
+            "symbol": "MustBindWith/ShouldBindWith",
+            "role": "Deprecated forwarding target.",
+            "line_range": [
+              780,
+              855
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "binding/binding_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "binding/binding.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "context_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "gin_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          }
+        ],
+        "invariants": [
+          {
+            "rule": "BindWith remains a logging synonym for MustBindWith and preserves the explicit Binding argument.",
+            "why": "Existing callers rely on this migration path.",
+            "reference": "deprecated.go"
+          },
+          {
+            "rule": "ginS constructs one gin.Default Engine and wrappers add no independent behavior.",
+            "why": "Forwarding parity defines the facade.",
+            "reference": "ginS/gins.go"
+          },
+          {
+            "rule": "Legacy Engine.AppEngine remains a soft migration surface until deliberately removed.",
+            "why": "Existing deployments may rely on its fallback.",
+            "reference": "gin.go"
+          }
+        ],
+        "pitfalls": [
+          {
+            "risk": "Changing BindWith to implicit binding selection.",
+            "consequence": "Explicit-binding callers receive different parsing behavior.",
+            "reference": "deprecated.go"
+          },
+          {
+            "risk": "Resetting ginS state or adding wrapper logic.",
+            "consequence": "Shared-engine parity drifts.",
+            "reference": "ginS/gins_test.go"
+          },
+          {
+            "risk": "Removing AppEngine fallback while retaining its marker.",
+            "consequence": "Legacy deployments lose trusted-platform behavior.",
+            "reference": "gin.go"
+          }
+        ],
+        "entry_questions": [
+          "Is the change on the shim or target?",
+          "Must explicit Binding selection remain?",
+          "Does ginS remain a pure forwarder?",
+          "Is AppEngine migration deliberate?"
+        ],
+        "validation": [
+          "go test -run TestBindWith ./...",
+          "go test ./ginS/..."
+        ],
+        "spans_subtrees": [
+          "deprecated.go",
+          "ginS",
+          "gin.go",
+          "context.go",
+          "routergroup.go"
+        ],
+        "stability": "medium",
+        "recurrence": "medium",
+        "confidence": "high",
+        "last_updated": "2026-08-27T00:00:00Z"
+      },
+      {
+        "concern": "Multi-format request binding and validation",
+        "one_line": "Owns content-type binding selection, decoder-specific request/body binding for non-JSON formats, lazy default validation, and the validation error contract.",
+        "covers": "binding.Binding and BindingBody selection, MsgPack/TOML/XML/YAML decoders, defaultValidator traversal and initialization, and their implementation tests.",
+        "excludes": "The pluggable JSON codec backend seam, form/query mapping internals, and deprecated API forwarding.",
+        "flows": [
+          {
+            "name": "Content type to decoded and validated object",
+            "description": "Context chooses a binding, the format implementation decodes into the destination, and the shared validator checks it.",
+            "steps": [
+              {
+                "path": "context.go",
+                "what_happens": "Bind and ShouldBind choose binding.Default from request method and Content-Type, while format-specific shortcuts call MustBindWith."
+              },
+              {
+                "path": "binding/binding.go",
+                "what_happens": "Default maps XML, MsgPack, YAML, and TOML MIME values to their BindingBody implementations."
+              },
+              {
+                "path": "binding/msgpack.go",
+                "what_happens": "msgpackBinding decodes request/body bytes with codec.MsgpackHandle and then calls validate."
+              },
+              {
+                "path": "binding/toml.go",
+                "what_happens": "tomlBinding decodes with toml.NewDecoder and then calls validate."
+              },
+              {
+                "path": "binding/xml.go",
+                "what_happens": "xmlBinding decodes with encoding/xml.Decoder and then calls validate."
+              },
+              {
+                "path": "binding/yaml.go",
+                "what_happens": "yamlBinding decodes with yaml.NewDecoder and then calls validate."
+              },
+              {
+                "path": "binding/default_validator.go",
+                "what_happens": "validate reaches the configured StructValidator, which lazily initializes validator.v10 and validates the destination."
+              },
+              {
+                "path": "binding/msgpack_test.go",
+                "what_happens": "TestMsgpackBindingBindBody verifies a decoded MsgPack field."
+              },
+              {
+                "path": "binding/toml_test.go",
+                "what_happens": "TestTOMLBindingBindBody verifies a decoded TOML field."
+              },
+              {
+                "path": "binding/xml_test.go",
+                "what_happens": "TestXMLBindingBindBody verifies a decoded XML field."
+              },
+              {
+                "path": "binding/yaml_test.go",
+                "what_happens": "TestYAMLBindingBindBody verifies a decoded YAML field."
+              }
+            ]
+          },
+          {
+            "name": "Recursive validation and stable error formatting",
+            "description": "The default validator handles supported shapes and produces deterministic indexed errors while tests cover success and failure paths.",
+            "steps": [
+              {
+                "path": "binding/default_validator.go",
+                "what_happens": "ValidateStruct distinguishes nil, scalar, pointer, struct, slice, and array inputs and recursively validates elements."
+              },
+              {
+                "path": "binding/default_validator.go",
+                "what_happens": "SliceValidationError.Error formats non-nil element errors with their original indexes."
+              },
+              {
+                "path": "binding/default_validator.go",
+                "what_happens": "lazyinit uses sync.Once and configures the binding tag on validator.New."
+              },
+              {
+                "path": "binding/default_validator_test.go",
+                "what_happens": "Tests exercise nil/scalar/struct/pointer/slice forms and both validation outcomes, plus indexed error formatting."
+              }
+            ]
+          }
+        ],
+        "touchpoints": [
+          {
+            "path": "binding/binding.go",
+            "symbol": "Binding/BindingBody/Default/validate",
+            "role": "Core binding selection and validation seam.",
+            "line_range": [
+              28,
+              139
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "context.go",
+            "symbol": "Bind/ShouldBind/MustBindWith",
+            "role": "Request-level entry and status/abort propagation.",
+            "line_range": [
+              780,
+              855
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "binding/default_validator.go",
+            "symbol": "defaultValidator/ValidateStruct/SliceValidationError/lazyinit",
+            "role": "Core recursive validator and error contract.",
+            "line_range": [
+              15,
+              89
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "binding/default_validator_test.go",
+            "symbol": "TestSliceValidationError/TestDefaultValidator",
+            "role": "Validator behavior and regression tests.",
+            "line_range": [
+              11,
+              86
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "binding/msgpack.go",
+            "symbol": "msgpackBinding/Bind/BindBody/decodeMsgPack",
+            "role": "MsgPack decoder and validation adapter.",
+            "line_range": [
+              14,
+              37
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "binding/msgpack_test.go",
+            "symbol": "TestMsgpackBindingBindBody/msgpackBody",
+            "role": "MsgPack binding contract test.",
+            "line_range": [
+              14,
+              34
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "binding/toml.go",
+            "symbol": "tomlBinding/Bind/BindBody/decodeToml",
+            "role": "TOML decoder and validation adapter.",
+            "line_range": [
+              14,
+              37
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "binding/toml_test.go",
+            "symbol": "TestTOMLBindingBindBody",
+            "role": "TOML binding contract test.",
+            "line_range": [
+              13,
+              28
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "binding/xml.go",
+            "symbol": "xmlBinding/Bind/BindBody/decodeXML",
+            "role": "XML decoder and validation adapter.",
+            "line_range": [
+              14,
+              37
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "binding/xml_test.go",
+            "symbol": "TestXMLBindingBindBody",
+            "role": "XML binding contract test.",
+            "line_range": [
+              13,
+              29
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "binding/yaml.go",
+            "symbol": "yamlBinding/Bind/BindBody/decodeYAML",
+            "role": "YAML decoder and validation adapter.",
+            "line_range": [
+              14,
+              37
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "binding/yaml_test.go",
+            "symbol": "TestYAMLBindingBindBody",
+            "role": "YAML binding contract test.",
+            "line_range": [
+              13,
+              25
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "binding/binding_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror; unique path-local and semantic match to accepted concern evidence.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "binding/multipart_form_mapping_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror; unique path-local and semantic match to accepted concern evidence.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "binding/multipart_form_mapping.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror; unique path-local and semantic match to accepted concern evidence.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "context_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror; unique path-local and semantic match to accepted concern evidence.",
+            "line_range": null,
+            "centrality": "supporting"
+          }
+        ],
+        "invariants": [
+          {
+            "rule": "Every body decoder returns decoder errors before invoking the shared validate function.",
+            "why": "Malformed input and destination validation are distinct failure stages.",
+            "reference": "binding/xml.go"
+          },
+          {
+            "rule": "BindingBody implementations support both request streams and supplied byte bodies.",
+            "why": "Context shortcuts and body-reuse APIs depend on both entry paths.",
+            "reference": "binding/msgpack.go"
+          },
+          {
+            "rule": "Validator skips nil/non-struct values, recursively validates slices/arrays, and initializes the engine once with the binding tag.",
+            "why": "This is the StructValidator contract documented by the binding package.",
+            "reference": "binding/default_validator.go"
+          },
+          {
+            "rule": "SliceValidationError preserves element indexes and omits nil errors from its string form.",
+            "why": "Callers need stable, actionable validation diagnostics.",
+            "reference": "binding/default_validator_test.go"
+          }
+        ],
+        "pitfalls": [
+          {
+            "risk": "Adding a MIME mapping without implementing both BindingBody paths or a matching test.",
+            "consequence": "Automatic binding and explicit Bind* shortcuts can diverge.",
+            "reference": "binding/binding.go"
+          },
+          {
+            "risk": "Bypassing validate after a decoder succeeds.",
+            "consequence": "binding tags stop enforcing request invariants for that format.",
+            "reference": "binding/yaml.go"
+          },
+          {
+            "risk": "Changing pointer/slice recursion or sync.Once initialization.",
+            "consequence": "Valid request shapes may be skipped or validator configuration may race or drift.",
+            "reference": "binding/default_validator.go"
+          }
+        ],
+        "entry_questions": [
+          "Is the change in MIME selection, decoding, or shared validation?",
+          "Does the format support both request and byte-body binding?",
+          "Does a decoder error remain distinct from a validation error?",
+          "Will pointer, slice, and array destinations retain the StructValidator contract?"
+        ],
+        "validation": [
+          "go test ./binding/... -run 'Test(DefaultValidator|SliceValidationError|MsgpackBinding|TOMLBinding|XMLBinding|YAMLBinding)'",
+          "go test ./... -run 'Test.*Bind.*'"
+        ],
+        "spans_subtrees": [
+          "binding",
+          "context.go"
+        ],
+        "stability": "high",
+        "recurrence": "high",
+        "confidence": "high",
+        "last_updated": "2026-08-27T00:00:00Z"
+      },
+      {
+        "concern": "URL path canonicalization and allocation behavior",
+        "one_line": "Owns canonical URL cleanup, repeated-separator normalization, trailing-slash semantics, and the allocation-sensitive helpers used before route lookup and proxy-prefix construction.",
+        "covers": "cleanPath, removeRepeatedChar, their stack-buffer fast paths, route redirect lookup, forwarded-prefix sanitization, and path tests/benchmarks.",
+        "excludes": "Radix-tree insertion and matching, route registration policy, and general request dispatch after the normalized path is produced.",
+        "flows": [
+          {
+            "name": "Request path normalization before lookup",
+            "description": "The engine normalizes a request path, then uses the canonical form for fixed-path redirect lookup.",
+            "steps": [
+              {
+                "path": "gin.go",
+                "what_happens": "Dispatch applies cleanPath when RemoveExtraSlash is enabled and uses cleanPath for fixed-path lookup."
+              },
+              {
+                "path": "path.go",
+                "what_happens": "cleanPath removes duplicate slashes and dot segments, prevents rooted .. traversal, preserves trailing slash intent, and returns the original substring when no allocation is needed."
+              },
+              {
+                "path": "path_test.go",
+                "what_happens": "TestPathClean and TestPathCleanLong pin canonical results and idempotence across ordinary and long paths."
+              }
+            ]
+          },
+          {
+            "name": "Forwarded prefix separator cleanup",
+            "description": "A forwarded prefix is sanitized before it is joined to the request URL.",
+            "steps": [
+              {
+                "path": "gin.go",
+                "what_happens": "handleHTTPRequest sanitizes X-Forwarded-Prefix and calls removeRepeatedChar before constructing the redirect path."
+              },
+              {
+                "path": "path.go",
+                "what_happens": "removeRepeatedChar detects repeated target bytes, lazily allocates only when needed, and preserves an already-normalized string."
+              },
+              {
+                "path": "path_test.go",
+                "what_happens": "TestRemoveRepeatedChar covers empty, unchanged, trailing, and repeated-slash cases."
+              }
+            ]
+          },
+          {
+            "name": "Allocation regression guard",
+            "description": "The path suite checks the no-change fast path and exposes short and long benchmarks.",
+            "steps": [
+              {
+                "path": "path_test.go",
+                "what_happens": "TestPathCleanMallocs uses AllocsPerRun and BenchmarkPathClean/BenchmarkPathCleanLong report allocation behavior."
+              },
+              {
+                "path": "path.go",
+                "what_happens": "bufApp delays copying into a stack-sized buffer until the first actual change."
+              }
+            ]
+          }
+        ],
+        "touchpoints": [
+          {
+            "path": "path.go",
+            "symbol": "cleanPath",
+            "role": "Core canonical URL path algorithm.",
+            "line_range": [
+              10,
+              151
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "path.go",
+            "symbol": "removeRepeatedChar/bufApp",
+            "role": "Core separator normalization and lazy buffer helper.",
+            "line_range": [
+              153,
+              218
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "path_test.go",
+            "symbol": "TestPathClean/TestPathCleanLong/TestRemoveRepeatedChar",
+            "role": "Canonicalization regression tests.",
+            "line_range": [
+              72,
+              190
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "path_test.go",
+            "symbol": "TestPathCleanMallocs/BenchmarkPathClean/BenchmarkPathCleanLong",
+            "role": "Allocation and performance checks.",
+            "line_range": [
+              78,
+              145
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "gin.go",
+            "symbol": "ServeHTTP/handleHTTPRequest fixed-path and forwarded-prefix handling",
+            "role": "Consumers of canonicalization helpers.",
+            "line_range": [
+              680,
+              815
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "tree.go",
+            "symbol": "findCaseInsensitivePath",
+            "role": "Route lookup receiving canonical paths.",
+            "line_range": [
+              600,
+              690
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "gin_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          },
+          {
+            "path": "tree_test.go",
+            "symbol": null,
+            "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+            "line_range": null,
+            "centrality": "supporting"
+          }
+        ],
+        "invariants": [
+          {
+            "rule": "Empty or relative paths become rooted and canonical; dot segments and repeated slashes are removed while a meaningful trailing slash is preserved.",
+            "why": "Redirects and route matching expose these URL semantics.",
+            "reference": "path.go"
+          },
+          {
+            "rule": "cleanPath is idempotent and its unchanged fast path avoids allocation.",
+            "why": "Tests assert output stability and zero allocations on clean inputs.",
+            "reference": "path_test.go"
+          },
+          {
+            "rule": "removeRepeatedChar changes only repeated target characters and preserves non-target content and trailing separators.",
+            "why": "Forwarded-prefix redirects must not rewrite unrelated path data.",
+            "reference": "path.go"
+          },
+          {
+            "rule": "The normalized path must be produced before fixed-path lookup or redirect construction.",
+            "why": "Lookup against an unnormalized path changes externally visible route behavior.",
+            "reference": "gin.go"
+          }
+        ],
+        "pitfalls": [
+          {
+            "risk": "Changing .. backtracking or trailing-slash handling.",
+            "consequence": "Redirect targets and route matching can change, including rooted traversal edge cases.",
+            "reference": "path.go"
+          },
+          {
+            "risk": "Introducing an allocation on the unchanged fast path.",
+            "consequence": "Hot request-path performance and allocation tests regress.",
+            "reference": "path_test.go"
+          },
+          {
+            "risk": "Normalizing forwarded prefixes with a broader rewrite than repeated separator removal.",
+            "consequence": "Redirect locations can be corrupted for unusual prefixes.",
+            "reference": "gin.go"
+          }
+        ],
+        "entry_questions": [
+          "Does the change preserve rooted, dot-segment, and trailing-slash semantics?",
+          "Does cleanPath remain idempotent and allocation-free for already-clean input?",
+          "Is this request-path lookup or forwarded-prefix construction?",
+          "Can the helper be called with a long path that exceeds the stack buffer?"
+        ],
+        "validation": [
+          "go test ./... -run 'TestPathClean|TestRemoveRepeatedChar'",
+          "go test ./... -run TestPathCleanMallocs",
+          "go test -run=none -bench 'BenchmarkPathClean' -benchmem ./..."
+        ],
+        "spans_subtrees": [
+          "path.go",
+          "gin.go",
+          "tree.go"
+        ],
+        "stability": "high",
+        "recurrence": "high",
+        "confidence": "high",
+        "last_updated": "2026-08-27T00:00:00Z"
+      },
+      {
+        "concern": "HTTP response renderer implementations",
+        "one_line": "Owns the Render interface contract, content-type registration, concrete response serialization, and renderer error/header/body behavior across JSON and non-JSON response formats.",
+        "covers": "render.Render and HTMLRender assertions, shared content-type handling, concrete JSON/XML renderers, and the broad renderer regression suite.",
+        "excludes": "ResponseWriter status commitment and Reader streaming mechanics, which remain in the accepted HTTP response writer and Reader rendering contract concern; JSON backend selection remains in the accepted codec concern.",
+        "flows": [
+          {
+            "name": "Render contract to concrete response",
+            "description": "A renderer satisfies the shared interface, sets a content type when absent, serializes data, and writes or returns the underlying error.",
+            "steps": [
+              {
+                "path": "render/render.go",
+                "what_happens": "Render declares Render and WriteContentType and compile-time assertions enumerate supported renderer implementations."
+              },
+              {
+                "path": "render/json.go",
+                "what_happens": "JSON-family implementations set content type, marshal through codec/json.API, and write bytes while propagating errors."
+              },
+              {
+                "path": "render/xml.go",
+                "what_happens": "XML writes its content type and encodes the supplied value to the response writer."
+              },
+              {
+                "path": "render/render_test.go",
+                "what_happens": "Renderer tests verify content types, serialized bodies, and marshal/write failures for JSON-family responses."
+              }
+            ]
+          },
+          {
+            "name": "Header and write-error behavior",
+            "description": "Renderer implementations preserve caller headers and surface failures at the operation that writes the response.",
+            "steps": [
+              {
+                "path": "render/render.go",
+                "what_happens": "writeContentType fills Content-Type only when the header is absent, preserving explicit overrides."
+              },
+              {
+                "path": "render/render_test.go",
+                "what_happens": "Tests use httptest writers and errorWriter to assert content type, body format, and errors from callback/data writes."
+              },
+              {
+                "path": "render/render_test.go",
+                "what_happens": "Additional tests exercise XML, protobuf, string/data, redirect, template, YAML, TOML, PDF, and Reader registrations through the shared contract."
+              }
+            ]
+          }
+        ],
+        "touchpoints": [
+          {
+            "path": "render/render.go",
+            "symbol": "Render/HTMLRender/writeContentType and compile-time assertions",
+            "role": "Core response renderer contract and header policy.",
+            "line_range": [
+              6,
+              44
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "render/render_test.go",
+            "symbol": "TestRender* and errorWriter",
+            "role": "Cross-renderer contract, serialization, header, and write-error tests.",
+            "line_range": [
+              1,
+              300
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "render/json.go",
+            "symbol": "JSON/IndentedJSON/SecureJSON/JsonpJSON/AsciiJSON/PureJSON",
+            "role": "JSON-family concrete renderer implementations.",
+            "line_range": [
+              17,
+              100
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "render/xml.go",
+            "symbol": "XML.Render/WriteContentType",
+            "role": "XML concrete renderer implementation.",
+            "line_range": [
+              10,
+              29
+            ],
+            "centrality": "core"
+          },
+          {
+            "path": "render/yaml.go",
+            "symbol": "YAML.Render/WriteContentType",
+            "role": "YAML concrete renderer implementation.",
+            "line_range": [
+              10,
+              30
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "render/toml.go",
+            "symbol": "TOML.Render/WriteContentType",
+            "role": "TOML concrete renderer implementation.",
+            "line_range": [
+              10,
+              30
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "render/string.go",
+            "symbol": "String.Render/WriteContentType",
+            "role": "Text response renderer.",
+            "line_range": [
+              10,
+              30
+            ],
+            "centrality": "supporting"
+          },
+          {
+            "path": "render/html.go",
+            "symbol": "HTMLRender/HTML.Render",
+            "role": "Template response renderer.",
+            "line_range": [
+              13,
+              110
+            ],
+            "centrality": "supporting"
+          }
+        ],
+        "invariants": [
+          {
+            "rule": "Every supported renderer implements both Render and WriteContentType; compile-time assertions protect the interface surface.",
+            "why": "Context.Render relies on this shared contract.",
+            "reference": "render/render.go"
+          },
+          {
+            "rule": "writeContentType does not overwrite an explicit Content-Type header.",
+            "why": "Consumers can choose a more specific media type or charset.",
+            "reference": "render/render.go"
+          },
+          {
+            "rule": "Serialization and writer errors are returned rather than swallowed.",
+            "why": "The caller must be able to record failed response generation.",
+            "reference": "render/render_test.go"
+          },
+          {
+            "rule": "JSON renderers use the selected codec/json API rather than a private encoder.",
+            "why": "Build-tag-selected backend behavior must remain effective for responses.",
+            "reference": "render/json.go"
+          }
+        ],
+        "pitfalls": [
+          {
+            "risk": "Adding a renderer without a compile-time assertion or contract test.",
+            "consequence": "A response format can compile locally but fail integration or header semantics later.",
+            "reference": "render/render.go"
+          },
+          {
+            "risk": "Overwriting caller-supplied Content-Type.",
+            "consequence": "Negotiation and custom media-type behavior drift.",
+            "reference": "render/render.go"
+          },
+          {
+            "risk": "Ignoring marshal or writer errors.",
+            "consequence": "Handlers report success after incomplete or invalid responses.",
+            "reference": "render/render_test.go"
+          },
+          {
+            "risk": "Changing JSON renderer calls without respecting codec/json.API.",
+            "consequence": "Build-tag-selected backend behavior diverges.",
+            "reference": "render/json.go"
+          }
+        ],
+        "entry_questions": [
+          "Does the renderer implement both methods and have a contract assertion?",
+          "Should an existing Content-Type be preserved?",
+          "Are serialization and writer errors returned?",
+          "Does a JSON response still use the selected codec API?",
+          "Is the issue renderer behavior or response-writer commitment?"
+        ],
+        "validation": [
+          "go test ./... -run 'TestRender'",
+          "go test ./render/...",
+          "go test ./... -run 'TestRender.*Error'"
+        ],
+        "spans_subtrees": [
+          "render",
+          "codec/json"
+        ],
+        "stability": "high",
+        "recurrence": "high",
+        "confidence": "high",
+        "last_updated": "2026-08-27T00:00:00Z"
+      }
+    ],
+    "not_concerns": [
+      {
+        "candidate": "render/html.go",
+        "why_rejected": "HTML template loading is an implementation behind render.Render and is covered by rendering concerns."
+      },
+      {
+        "candidate": "fs.go",
+        "why_rejected": "Static files wrap http.FileServer/StripPrefix with no distinct Gin-owned specialty."
+      },
+      {
+        "candidate": "mode.go",
+        "why_rejected": "Mode and debug printing are cross-cutting configuration glue, not a standalone specialty."
+      },
+      {
+        "candidate": "errors.go",
+        "why_rejected": "ErrorType/errorMsgs are a shared envelope consumed by binding, rendering, and middleware."
+      },
+      {
+        "candidate": "BENCHMARKS.md",
+        "why_rejected": "Benchmark instructions document checks but define no separate runtime contract."
+      },
+      {
+        "candidate": "benchmarks_test.go",
+        "why_rejected": "Benchmarks measure adjacent behavior and are validation evidence rather than an independent specialty."
+      },
+      {
+        "candidate": "CONTRIBUTING.md",
+        "why_rejected": "Contribution lifecycle guidance is a process artifact rather than application architecture."
+      }
+    ]
+  }
+}

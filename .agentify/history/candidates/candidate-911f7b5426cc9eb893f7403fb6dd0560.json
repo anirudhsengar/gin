@@ -1,0 +1,565 @@
+{
+  "schema_version": "1",
+  "event_type": "candidate_decision",
+  "candidate_id": "candidate-911f7b5426cc9eb893f7403fb6dd0560",
+  "memory_id": "specialist-profile-specialist-multi-format-request-binding-and-validation-18ee01c48f78b541",
+  "candidate": {
+    "schema_version": "1",
+    "memory_id": "specialist-profile-specialist-multi-format-request-binding-and-validation-18ee01c48f78b541",
+    "kind": "specialist",
+    "proposed_by_agent_id": "orchestrator",
+    "owning_agent_id": "specialist-multi-format-request-binding-and-validation",
+    "statement": "Owns content-type binding selection, decoder-specific request/body binding for non-JSON formats, lazy default validation, and the validation error contract.",
+    "source_type": "validated_bootstrap",
+    "supporting_commit": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+    "evidence": [
+      {
+        "evidence_id": "evidence-03c205cda0bf5428437a5b9c",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/default_validator_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "06dcab0e7e9f4c87188754d8ae818a57e69c6eb250ee6eb82945e6b4a3ea50cb",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/default_validator_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-1599ca77f1700d2b3479a75f",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/yaml.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "5da314ba640364ffed38940f5c922499a6b5966ac90f782666a32bf8fef3e592",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/yaml.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-17c07a5ac190887c5a6c3557",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/binding.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "176e200c0c0ae26eff015202787285d5205ff068d475dce9339fc5dd29008cd2",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/binding.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-47be9e06531fe98222a55e25",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/xml_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "b453ca5804a0a3adbc8f4ca4f97caf981cfbf749fabd7709a92b190b62d02c12",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/xml_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-4a1aaf5c4d21ca9383a52fa1",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/toml.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "ce9f395dd0c2d62da942cc9f9a8a576cb81b4cacc9934fa6f3d3f19881a82790",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/toml.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-508f9c20c9e3dd24dad49779",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/msgpack_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "5209e6198b991f697d1be520bafa04e2eb769a042e1c445f50ac10fca1486150",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/msgpack_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-60d9f3fca3c92f0698979ba4",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/toml_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "f3bd4fbc65f0fc675acab2728ed633260526c60f5f366a8af36d5e4951123fd7",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/toml_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-63bd5e17129b66b81e090720",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/msgpack.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "6467b18f19ae296551cfee362331b536726f6b1a030fcc61e8b4775a5f9d88b3",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/msgpack.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-7a10ab983a6a78e371bff773",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/default_validator.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "45a294cf13c81862f99e5930fce8be67e74c27ac17cd87249b4e161008a45e23",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/default_validator.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-b07f58f6d22405aca20852fc",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/binding_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "e7261eb5ea6451ae47c6dc0ce484c1a9a3a2a2a42e190b4ca57df065bea68c8d",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/binding_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-b67f6b9627d8f17943f5ccb5",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/multipart_form_mapping.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "94e6763b541ff04d66388e0d3b07285da85e02ed154aea0842239c857b6db21a",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/multipart_form_mapping.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-b877065c0560574bae2b9d6e",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/xml.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "02ada76ed4d142b4d3e1813c068c2c43e9e01c19276eda5c875039355947b18a",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/xml.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-e0a52264acbaedb6eba7b27b",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/yaml_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "72a22492848e204676e8ac7db4f922c27b9b2cdf475caca1406356b892f44d1c",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/yaml_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-e4a10d6ce4624f447e42a650",
+        "source_type": "validated_bootstrap",
+        "repository_path": "context_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "278eebccdeea6bf3d9897937cdbde604967052bb639b71f93ed24babf94a16cc",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: context_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-f4c2b7993aa2b49ca9ca1c19",
+        "source_type": "validated_bootstrap",
+        "repository_path": "context.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "e883d5e301055579609774ca2f9cb68b39b14f682c3240b3f384d40e9f98147e",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: context.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-fba2b324dcef47f8439781d2",
+        "source_type": "validated_bootstrap",
+        "repository_path": "binding/multipart_form_mapping_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "303a10ca4806e404248a548f866c8db2a1175eaad71d157e1aeb87de1b5eefcf",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: binding/multipart_form_mapping_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      }
+    ],
+    "confidence": "high",
+    "dependent_paths": [
+      "binding/binding_test.go",
+      "binding/binding.go",
+      "binding/default_validator_test.go",
+      "binding/default_validator.go",
+      "binding/msgpack_test.go",
+      "binding/msgpack.go",
+      "binding/multipart_form_mapping_test.go",
+      "binding/multipart_form_mapping.go",
+      "binding/toml_test.go",
+      "binding/toml.go",
+      "binding/xml_test.go",
+      "binding/xml.go",
+      "binding/yaml_test.go",
+      "binding/yaml.go",
+      "context_test.go",
+      "context.go"
+    ],
+    "invalidation_conditions": [
+      "Revalidate when any specialist freshness dependency changes or disappears."
+    ],
+    "contradicts": [],
+    "human_attribution": null,
+    "tags": [
+      "concern-multi-format-request-binding-and-validation",
+      "specialist-profile"
+    ],
+    "proposed_at": "2026-08-15T05:44:19.000Z",
+    "payload": {
+      "specialist_id": "specialist-multi-format-request-binding-and-validation",
+      "concern": "Multi-format request binding and validation",
+      "one_line": "Owns content-type binding selection, decoder-specific request/body binding for non-JSON formats, lazy default validation, and the validation error contract.",
+      "covers": "binding.Binding and BindingBody selection, MsgPack/TOML/XML/YAML decoders, defaultValidator traversal and initialization, and their implementation tests.",
+      "excludes": "The pluggable JSON codec backend seam, form/query mapping internals, and deprecated API forwarding.",
+      "flows": [
+        {
+          "name": "Content type to decoded and validated object",
+          "description": "Context chooses a binding, the format implementation decodes into the destination, and the shared validator checks it.",
+          "steps": [
+            {
+              "path": "context.go",
+              "what_happens": "Bind and ShouldBind choose binding.Default from request method and Content-Type, while format-specific shortcuts call MustBindWith."
+            },
+            {
+              "path": "binding/binding.go",
+              "what_happens": "Default maps XML, MsgPack, YAML, and TOML MIME values to their BindingBody implementations."
+            },
+            {
+              "path": "binding/msgpack.go",
+              "what_happens": "msgpackBinding decodes request/body bytes with codec.MsgpackHandle and then calls validate."
+            },
+            {
+              "path": "binding/toml.go",
+              "what_happens": "tomlBinding decodes with toml.NewDecoder and then calls validate."
+            },
+            {
+              "path": "binding/xml.go",
+              "what_happens": "xmlBinding decodes with encoding/xml.Decoder and then calls validate."
+            },
+            {
+              "path": "binding/yaml.go",
+              "what_happens": "yamlBinding decodes with yaml.NewDecoder and then calls validate."
+            },
+            {
+              "path": "binding/default_validator.go",
+              "what_happens": "validate reaches the configured StructValidator, which lazily initializes validator.v10 and validates the destination."
+            },
+            {
+              "path": "binding/msgpack_test.go",
+              "what_happens": "TestMsgpackBindingBindBody verifies a decoded MsgPack field."
+            },
+            {
+              "path": "binding/toml_test.go",
+              "what_happens": "TestTOMLBindingBindBody verifies a decoded TOML field."
+            },
+            {
+              "path": "binding/xml_test.go",
+              "what_happens": "TestXMLBindingBindBody verifies a decoded XML field."
+            },
+            {
+              "path": "binding/yaml_test.go",
+              "what_happens": "TestYAMLBindingBindBody verifies a decoded YAML field."
+            }
+          ]
+        },
+        {
+          "name": "Recursive validation and stable error formatting",
+          "description": "The default validator handles supported shapes and produces deterministic indexed errors while tests cover success and failure paths.",
+          "steps": [
+            {
+              "path": "binding/default_validator.go",
+              "what_happens": "ValidateStruct distinguishes nil, scalar, pointer, struct, slice, and array inputs and recursively validates elements."
+            },
+            {
+              "path": "binding/default_validator.go",
+              "what_happens": "SliceValidationError.Error formats non-nil element errors with their original indexes."
+            },
+            {
+              "path": "binding/default_validator.go",
+              "what_happens": "lazyinit uses sync.Once and configures the binding tag on validator.New."
+            },
+            {
+              "path": "binding/default_validator_test.go",
+              "what_happens": "Tests exercise nil/scalar/struct/pointer/slice forms and both validation outcomes, plus indexed error formatting."
+            }
+          ]
+        }
+      ],
+      "touchpoints": [
+        {
+          "path": "binding/binding_test.go",
+          "symbol": null,
+          "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror; unique path-local and semantic match to accepted concern evidence.",
+          "line_range": null,
+          "centrality": "supporting"
+        },
+        {
+          "path": "binding/binding.go",
+          "symbol": "Binding/BindingBody/Default/validate",
+          "role": "Core binding selection and validation seam.",
+          "line_range": [
+            28,
+            139
+          ],
+          "centrality": "core"
+        },
+        {
+          "path": "binding/default_validator_test.go",
+          "symbol": "TestSliceValidationError/TestDefaultValidator",
+          "role": "Validator behavior and regression tests.",
+          "line_range": [
+            11,
+            86
+          ],
+          "centrality": "supporting"
+        },
+        {
+          "path": "binding/default_validator.go",
+          "symbol": "defaultValidator/ValidateStruct/SliceValidationError/lazyinit",
+          "role": "Core recursive validator and error contract.",
+          "line_range": [
+            15,
+            89
+          ],
+          "centrality": "core"
+        },
+        {
+          "path": "binding/msgpack_test.go",
+          "symbol": "TestMsgpackBindingBindBody/msgpackBody",
+          "role": "MsgPack binding contract test.",
+          "line_range": [
+            14,
+            34
+          ],
+          "centrality": "supporting"
+        },
+        {
+          "path": "binding/msgpack.go",
+          "symbol": "msgpackBinding/Bind/BindBody/decodeMsgPack",
+          "role": "MsgPack decoder and validation adapter.",
+          "line_range": [
+            14,
+            37
+          ],
+          "centrality": "core"
+        },
+        {
+          "path": "binding/multipart_form_mapping_test.go",
+          "symbol": null,
+          "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror; unique path-local and semantic match to accepted concern evidence.",
+          "line_range": null,
+          "centrality": "supporting"
+        },
+        {
+          "path": "binding/multipart_form_mapping.go",
+          "symbol": null,
+          "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror; unique path-local and semantic match to accepted concern evidence.",
+          "line_range": null,
+          "centrality": "supporting"
+        },
+        {
+          "path": "binding/toml_test.go",
+          "symbol": "TestTOMLBindingBindBody",
+          "role": "TOML binding contract test.",
+          "line_range": [
+            13,
+            28
+          ],
+          "centrality": "supporting"
+        },
+        {
+          "path": "binding/toml.go",
+          "symbol": "tomlBinding/Bind/BindBody/decodeToml",
+          "role": "TOML decoder and validation adapter.",
+          "line_range": [
+            14,
+            37
+          ],
+          "centrality": "core"
+        },
+        {
+          "path": "binding/xml_test.go",
+          "symbol": "TestXMLBindingBindBody",
+          "role": "XML binding contract test.",
+          "line_range": [
+            13,
+            29
+          ],
+          "centrality": "supporting"
+        },
+        {
+          "path": "binding/xml.go",
+          "symbol": "xmlBinding/Bind/BindBody/decodeXML",
+          "role": "XML decoder and validation adapter.",
+          "line_range": [
+            14,
+            37
+          ],
+          "centrality": "core"
+        },
+        {
+          "path": "binding/yaml_test.go",
+          "symbol": "TestYAMLBindingBindBody",
+          "role": "YAML binding contract test.",
+          "line_range": [
+            13,
+            25
+          ],
+          "centrality": "supporting"
+        },
+        {
+          "path": "binding/yaml.go",
+          "symbol": "yamlBinding/Bind/BindBody/decodeYAML",
+          "role": "YAML decoder and validation adapter.",
+          "line_range": [
+            14,
+            37
+          ],
+          "centrality": "core"
+        },
+        {
+          "path": "context_test.go",
+          "symbol": null,
+          "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror; unique path-local and semantic match to accepted concern evidence.",
+          "line_range": null,
+          "centrality": "supporting"
+        },
+        {
+          "path": "context.go",
+          "symbol": "Bind/ShouldBind/MustBindWith",
+          "role": "Request-level entry and status/abort propagation.",
+          "line_range": [
+            780,
+            855
+          ],
+          "centrality": "supporting"
+        }
+      ],
+      "invariants": [
+        {
+          "rule": "Every body decoder returns decoder errors before invoking the shared validate function.",
+          "why": "Malformed input and destination validation are distinct failure stages.",
+          "reference": "binding/xml.go"
+        },
+        {
+          "rule": "BindingBody implementations support both request streams and supplied byte bodies.",
+          "why": "Context shortcuts and body-reuse APIs depend on both entry paths.",
+          "reference": "binding/msgpack.go"
+        },
+        {
+          "rule": "Validator skips nil/non-struct values, recursively validates slices/arrays, and initializes the engine once with the binding tag.",
+          "why": "This is the StructValidator contract documented by the binding package.",
+          "reference": "binding/default_validator.go"
+        },
+        {
+          "rule": "SliceValidationError preserves element indexes and omits nil errors from its string form.",
+          "why": "Callers need stable, actionable validation diagnostics.",
+          "reference": "binding/default_validator_test.go"
+        }
+      ],
+      "pitfalls": [
+        {
+          "risk": "Adding a MIME mapping without implementing both BindingBody paths or a matching test.",
+          "consequence": "Automatic binding and explicit Bind* shortcuts can diverge.",
+          "reference": "binding/binding.go"
+        },
+        {
+          "risk": "Bypassing validate after a decoder succeeds.",
+          "consequence": "binding tags stop enforcing request invariants for that format.",
+          "reference": "binding/yaml.go"
+        },
+        {
+          "risk": "Changing pointer/slice recursion or sync.Once initialization.",
+          "consequence": "Valid request shapes may be skipped or validator configuration may race or drift.",
+          "reference": "binding/default_validator.go"
+        }
+      ],
+      "entry_questions": [
+        "Does a decoder error remain distinct from a validation error?",
+        "Does the format support both request and byte-body binding?",
+        "Is the change in MIME selection, decoding, or shared validation?",
+        "Will pointer, slice, and array destinations retain the StructValidator contract?"
+      ],
+      "context_paths": [
+        "binding/binding_test.go",
+        "binding/binding.go",
+        "binding/default_validator_test.go",
+        "binding/default_validator.go",
+        "binding/msgpack_test.go",
+        "binding/msgpack.go",
+        "binding/multipart_form_mapping_test.go",
+        "binding/multipart_form_mapping.go",
+        "binding/toml_test.go",
+        "binding/toml.go",
+        "binding/xml_test.go",
+        "binding/xml.go",
+        "binding/yaml_test.go",
+        "binding/yaml.go",
+        "context_test.go",
+        "context.go"
+      ],
+      "related_specialists": [
+        "specialist-http-basic-authentication-middleware",
+        "specialist-http-response-writer-and-reader-rendering-contract",
+        "specialist-pluggable-json-codec-via-build-tag-selected-backends",
+        "specialist-public-api-compatibility-and-convenience-wrappers"
+      ],
+      "validation_commands": []
+    },
+    "candidate_id": "candidate-911f7b5426cc9eb893f7403fb6dd0560",
+    "candidate_digest": "e4c0d72fb55ec9726258a83f49c033327baec23c25325e240fa2a2fb2da877c5"
+  },
+  "decision": "accepted",
+  "actor": "knowledge-maintainer",
+  "reason": "accept specialist portfolio 9b1d44e4b4a9e035701dbbf6518c5dde0585a2f4ec92644f3e4d169caf56b3a2",
+  "occurred_at": "2026-08-27T03:13:18.891Z",
+  "candidate_digest": "e4c0d72fb55ec9726258a83f49c033327baec23c25325e240fa2a2fb2da877c5",
+  "resulting_memory_id": "specialist-profile-specialist-multi-format-request-binding-and-validation-18ee01c48f78b541",
+  "event_digest": "346a2270833d6cc9332ed6502b2d9418b1d94edcc3a83c8eecfcc1494f3bbdd4"
+}

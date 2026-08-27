@@ -1,0 +1,345 @@
+{
+  "schema_version": "1",
+  "event_type": "candidate_decision",
+  "candidate_id": "candidate-1b98fca8c92bd70514939ca887798eac",
+  "memory_id": "specialist-profile-specialist-http-route-tree-and-request-dispatch-3c5d2c31ddfd8af9",
+  "candidate": {
+    "schema_version": "1",
+    "memory_id": "specialist-profile-specialist-http-route-tree-and-request-dispatch-3c5d2c31ddfd8af9",
+    "kind": "specialist",
+    "proposed_by_agent_id": "orchestrator",
+    "owning_agent_id": "specialist-http-route-tree-and-request-dispatch",
+    "statement": "Owns route registration into per-method radix trees and request-time matching, parameter extraction, handler selection, and redirect/error fallback.",
+    "source_type": "validated_bootstrap",
+    "supporting_commit": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+    "evidence": [
+      {
+        "evidence_id": "evidence-14915e8262b4fc9e1e8e1eb1",
+        "source_type": "validated_bootstrap",
+        "repository_path": "tree_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "29fddc7f518a711e8287107bc95a554970797d3b9a7745e78fd50a85810e0d66",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: tree_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-455f397bd2717051bc870f6a",
+        "source_type": "validated_bootstrap",
+        "repository_path": "routergroup_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "1441951fc10fe998236d328c3942fcebbb6fd9c448cb1ece71b5da8018409acb",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: routergroup_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-61f193b5979a7d768e1b9c27",
+        "source_type": "validated_bootstrap",
+        "repository_path": "utils.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "fa56dc5cda7167649957f412bfb4acbd498ceb7e259ff76195ac0d256cd52e45",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: utils.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-718a6d39c1773db4e90a7c30",
+        "source_type": "validated_bootstrap",
+        "repository_path": "utils_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "9cc87cb3e789d900c9dae13baf2de965c4e318b980f93ef2ab64668322e5ad5e",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: utils_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-7423d817c887c8a6f958af75",
+        "source_type": "validated_bootstrap",
+        "repository_path": "tree.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "89d06fd0d30e5b6531b04af306ce71bec079e3e7446ee0496f2260613ede0fe7",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: tree.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-7aa790cfb2e92b4ae000d00d",
+        "source_type": "validated_bootstrap",
+        "repository_path": "gin.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "7489e54df8c18c20bb60c30ff82c0aed2f72332ba7c124be000502645fc12be8",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: gin.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-96799a7cc246750d890bcf2a",
+        "source_type": "validated_bootstrap",
+        "repository_path": "routergroup.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "e00c81913a4f1da0406ee0a53108ad51eb3d2c3f77d177f9696b31636d4a5b7c",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: routergroup.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      },
+      {
+        "evidence_id": "evidence-dac167425fe3191961dace62",
+        "source_type": "validated_bootstrap",
+        "repository_path": "gin_test.go",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "cc8434a09e00d673c9d1b2bdeeabef714c17ae648fb6a3e015334f468aa41c65",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: gin_test.go",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "agentify-specialist-discovery"
+      }
+    ],
+    "confidence": "high",
+    "dependent_paths": [
+      "gin_test.go",
+      "gin.go",
+      "routergroup_test.go",
+      "routergroup.go",
+      "tree_test.go",
+      "tree.go",
+      "utils_test.go",
+      "utils.go"
+    ],
+    "invalidation_conditions": [
+      "Revalidate when any specialist freshness dependency changes or disappears."
+    ],
+    "contradicts": [],
+    "human_attribution": null,
+    "tags": [
+      "concern-http-route-tree-and-request-dispatch",
+      "specialist-profile"
+    ],
+    "proposed_at": "2026-08-15T05:44:19.000Z",
+    "payload": {
+      "specialist_id": "specialist-http-route-tree-and-request-dispatch",
+      "concern": "HTTP route tree and request dispatch",
+      "one_line": "Owns route registration into per-method radix trees and request-time matching, parameter extraction, handler selection, and redirect/error fallback.",
+      "covers": "Engine registration and ServeHTTP dispatch, RouterGroup path composition, trie insertion/lookup, and route helper tests.",
+      "excludes": "Middleware semantics, static-file internals, trusted-proxy extraction, renderer implementations, and listener lifecycle.",
+      "flows": [
+        {
+          "name": "Request dispatch and fallback",
+          "description": "The engine resolves a URL and runs the handler or miss fallback.",
+          "steps": [
+            {
+              "path": "gin.go",
+              "what_happens": "ServeHTTP resets a pooled Context and calls handleHTTPRequest."
+            },
+            {
+              "path": "tree.go",
+              "what_happens": "node.getValue walks edges and returns handlers, Params, fullPath, and TSR hints."
+            },
+            {
+              "path": "gin.go",
+              "what_happens": "handleHTTPRequest chooses redirect, 405, or 404 behavior."
+            },
+            {
+              "path": "gin_test.go",
+              "what_happens": "Engine tests pin redirects, registration failures, re-entry, literal-colon updates, and route listing."
+            }
+          ]
+        },
+        {
+          "name": "Route registration",
+          "description": "Verbs compose paths and handlers before attaching them to a method trie.",
+          "steps": [
+            {
+              "path": "routergroup.go",
+              "what_happens": "RouterGroup verbs calculate absolute paths and combine handlers."
+            },
+            {
+              "path": "gin.go",
+              "what_happens": "Engine.addRoute validates inputs and sizes pooled context buffers."
+            },
+            {
+              "path": "tree.go",
+              "what_happens": "node.addRoute splits prefixes and inserts static, parameter, or catch-all nodes."
+            },
+            {
+              "path": "utils.go",
+              "what_happens": "joinPaths and safeUint16 support path composition and sizing."
+            }
+          ]
+        }
+      ],
+      "touchpoints": [
+        {
+          "path": "gin_test.go",
+          "symbol": "TestAddRoute/TestRoute*/TestEngineHandleContext/TestLiteralColon",
+          "role": "Engine dispatch tests.",
+          "line_range": [
+            400,
+            770
+          ],
+          "centrality": "supporting"
+        },
+        {
+          "path": "gin.go",
+          "symbol": "Engine.addRoute/ServeHTTP/handleHTTPRequest/HandleContext",
+          "role": "Core routing orchestration and fallbacks.",
+          "line_range": [
+            350,
+            832
+          ],
+          "centrality": "core"
+        },
+        {
+          "path": "routergroup_test.go",
+          "symbol": null,
+          "role": "Trusted semantic closure attached this tracked dependency: tracked path-local implementation/test mirror.",
+          "line_range": null,
+          "centrality": "supporting"
+        },
+        {
+          "path": "routergroup.go",
+          "symbol": "RouterGroup.handle/calculateAbsolutePath/combineHandlers",
+          "role": "Path and handler-chain construction.",
+          "line_range": [
+            40,
+            195
+          ],
+          "centrality": "supporting"
+        },
+        {
+          "path": "tree_test.go",
+          "symbol": "TestTreeAddAndGet/TestTreeWildcard/TestTreeFindCaseInsensitivePath",
+          "role": "Trie and wildcard tests.",
+          "line_range": [
+            1,
+            1100
+          ],
+          "centrality": "supporting"
+        },
+        {
+          "path": "tree.go",
+          "symbol": "node.addRoute/node.getValue/insertChild",
+          "role": "Core radix-tree matcher.",
+          "line_range": [
+            1,
+            814
+          ],
+          "centrality": "core"
+        },
+        {
+          "path": "utils_test.go",
+          "symbol": "TestJoinPaths/TestFunctionName/TestSafeUint16",
+          "role": "Helper tests.",
+          "line_range": [
+            70,
+            200
+          ],
+          "centrality": "peripheral"
+        },
+        {
+          "path": "utils.go",
+          "symbol": "joinPaths/nameOfFunction/assert1/safeUint16",
+          "role": "Routing support helpers.",
+          "line_range": [
+            80,
+            180
+          ],
+          "centrality": "supporting"
+        }
+      ],
+      "invariants": [
+        {
+          "rule": "The wildcard child remains final and node priority accounts for descendants and its own handler.",
+          "why": "Lookup and priority reordering rely on this convention.",
+          "reference": "tree.go"
+        },
+        {
+          "rule": "Registration precedes serving and is not concurrency-safe.",
+          "why": "Trie mutation and one-shot route updates are unprotected.",
+          "reference": "gin.go"
+        },
+        {
+          "rule": "Fallback order is trailing-slash, fixed-path, method-not-allowed, then not-found.",
+          "why": "The order is externally visible.",
+          "reference": "gin.go"
+        },
+        {
+          "rule": "UseEscapedPath overrides UseRawPath and affects parameter unescaping.",
+          "why": "The engine chooses path representation before lookup.",
+          "reference": "gin.go"
+        }
+      ],
+      "pitfalls": [
+        {
+          "risk": "Registering literal-colon routes after the one-shot route update.",
+          "consequence": "New escaped paths can fail to match.",
+          "reference": "gin.go"
+        },
+        {
+          "risk": "Changing wildcard ordering or skipped-node rollback.",
+          "consequence": "Greedy parameters can shadow static routes.",
+          "reference": "tree.go"
+        },
+        {
+          "risk": "Changing joinPaths or safeUint16 without updating pool assumptions.",
+          "consequence": "Nested paths or parameter buffers become incorrect.",
+          "reference": "utils.go"
+        }
+      ],
+      "entry_questions": [
+        "Does the path introduce wildcard, escaped-colon, raw-path, or extra-slash behavior?",
+        "Is this registration or dispatch?",
+        "Which fallback should win?"
+      ],
+      "context_paths": [
+        "gin_test.go",
+        "gin.go",
+        "routergroup_test.go",
+        "routergroup.go",
+        "tree_test.go",
+        "tree.go",
+        "utils_test.go",
+        "utils.go"
+      ],
+      "related_specialists": [
+        "specialist-http-response-writer-and-reader-rendering-contract",
+        "specialist-middleware-diagnostics-and-panic-recovery",
+        "specialist-public-api-compatibility-and-convenience-wrappers",
+        "specialist-zero-allocation-string-byte-conversion"
+      ],
+      "validation_commands": []
+    },
+    "candidate_id": "candidate-1b98fca8c92bd70514939ca887798eac",
+    "candidate_digest": "5ff59acda98275a839c965800574428aab1611c3fab596e2f840a60e835ebb13"
+  },
+  "decision": "accepted",
+  "actor": "knowledge-maintainer",
+  "reason": "accept specialist portfolio 9b1d44e4b4a9e035701dbbf6518c5dde0585a2f4ec92644f3e4d169caf56b3a2",
+  "occurred_at": "2026-08-27T03:13:17.748Z",
+  "candidate_digest": "5ff59acda98275a839c965800574428aab1611c3fab596e2f840a60e835ebb13",
+  "resulting_memory_id": "specialist-profile-specialist-http-route-tree-and-request-dispatch-3c5d2c31ddfd8af9",
+  "event_digest": "f18fe03bf677ca778cdb417030cf8d00a14c3adc074c77b91b51475594fa82f3"
+}

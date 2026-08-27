@@ -1,0 +1,89 @@
+{
+  "schema_version": "1",
+  "agent_id": "specialist-http-basic-authentication-middleware",
+  "revision": 1,
+  "role": "specialist",
+  "display_name": "HTTP Basic Authentication Middleware Specialist",
+  "domain": "HTTP Basic authentication middleware",
+  "status": "active",
+  "read_only": true,
+  "write_authority": "none",
+  "github_write_authority": "none",
+  "memory_kinds": [
+    "codebase",
+    "episode",
+    "procedure",
+    "specialist"
+  ],
+  "supporting_commit": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+  "evidence": [
+    {
+      "evidence_id": "evidence-17c07a5ac190887c5a6c3557",
+      "source_type": "validated_bootstrap",
+      "repository_path": "binding/binding.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "176e200c0c0ae26eff015202787285d5205ff068d475dce9339fc5dd29008cd2",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: binding/binding.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-2c53c8b7a74da5b1ef93042f",
+      "source_type": "validated_bootstrap",
+      "repository_path": "auth.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "be38ef38614d2b9488d0e73ff2f8b432fc61cc90f4b7e071d0bbf78d898464c1",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: auth.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-332810b5596a73be0cf4c508",
+      "source_type": "validated_bootstrap",
+      "repository_path": "auth_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "563dc4a800566b399f0eaf002a0f33260f1cb654247481d6c45d7b30105fb9c7",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: auth_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-e4a10d6ce4624f447e42a650",
+      "source_type": "validated_bootstrap",
+      "repository_path": "context_test.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "278eebccdeea6bf3d9897937cdbde604967052bb639b71f93ed24babf94a16cc",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: context_test.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    },
+    {
+      "evidence_id": "evidence-f4c2b7993aa2b49ca9ca1c19",
+      "source_type": "validated_bootstrap",
+      "repository_path": "context.go",
+      "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "sha256": "e883d5e301055579609774ca2f9cb68b39b14f682c3240b3f384d40e9f98147e",
+      "line_start": null,
+      "line_end": null,
+      "external_ref": null,
+      "description": "Tracked repository evidence for specialist and procedure discovery: context.go",
+      "observed_at": "2026-08-15T05:44:19.000Z",
+      "actor": "agentify-specialist-discovery"
+    }
+  ],
+  "created_at": "2026-08-27T03:13:16.865Z",
+  "updated_at": "2026-08-27T03:13:16.865Z",
+  "content_digest": "9880860cb0a30bda534b4335d2265e150be094059195d6c5e8cc0b3dd4b820d4"
+}

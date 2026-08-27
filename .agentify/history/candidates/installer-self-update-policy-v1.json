@@ -1,0 +1,83 @@
+{
+  "schema_version": "1",
+  "event_type": "candidate_decision",
+  "candidate_id": "installer-self-update-policy-v1",
+  "memory_id": "self-update-allowlist",
+  "candidate": {
+    "schema_version": "1",
+    "candidate_id": "installer-self-update-policy-v1",
+    "memory_id": "self-update-allowlist",
+    "kind": "policy",
+    "proposed_by_agent_id": "knowledge-maintainer",
+    "owning_agent_id": "knowledge-maintainer",
+    "statement": "Automatic learning is confined to versioned Agentify knowledge, identity, history, manifest, and canonical ignore-rule paths.",
+    "source_type": "maintainer_instruction",
+    "supporting_commit": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+    "evidence": [
+      {
+        "evidence_id": "evidence-966ea473754c97ca691fdc15",
+        "source_type": "maintainer_instruction",
+        "repository_path": "README.md",
+        "commit_sha": "dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+        "sha256": "0c71595f35bbc7a303d2fb793b0e4639e1f3c3d1eff6a1771b705354f4e8359b",
+        "line_start": null,
+        "line_end": null,
+        "external_ref": null,
+        "description": "Tracked repository evidence for specialist and procedure discovery: README.md",
+        "observed_at": "2026-08-15T05:44:19.000Z",
+        "actor": "anirudhsengar"
+      }
+    ],
+    "confidence": "verified",
+    "dependent_paths": [
+      ".agentify/manifest.json"
+    ],
+    "invalidation_conditions": [
+      "trusted installer upgrade changes the self-update boundary"
+    ],
+    "contradicts": [],
+    "human_attribution": {
+      "actor": "anirudhsengar",
+      "source_ref": "installer:dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9",
+      "accepted_at": "2026-08-15T05:44:19.000Z"
+    },
+    "tags": [
+      "allowlist",
+      "policy",
+      "self-update"
+    ],
+    "proposed_at": "2026-08-15T05:44:19.000Z",
+    "payload": {
+      "policy_key": "self-update-allowlist",
+      "rule": "Only .agentify agents, knowledge, history, manifest, and canonical ignore rules may self-update; policies, application source, dependencies, workflows, runtime code, and operational state are immutable to learning.",
+      "protected_paths": [
+        ".agentify/policies",
+        ".agentify/runtime",
+        ".agentify/state-transactions",
+        ".github",
+        "package-lock.json",
+        "package.json"
+      ],
+      "allowed_tools": [],
+      "forbidden_actions": [
+        "application source update",
+        "dependency update",
+        "permission expansion",
+        "policy update",
+        "runtime code update",
+        "workflow update"
+      ],
+      "approval_required": true,
+      "numeric_limit": null,
+      "unit": null
+    },
+    "candidate_digest": "97ce0563de9cc7006a8e323cddbd03a74c87ba7dc63c366aab593f62094182d7"
+  },
+  "decision": "accepted",
+  "actor": "knowledge-maintainer",
+  "reason": "install the maintainer-attributed self-update allowlist",
+  "occurred_at": "2026-08-27T02:10:15.560Z",
+  "candidate_digest": "97ce0563de9cc7006a8e323cddbd03a74c87ba7dc63c366aab593f62094182d7",
+  "resulting_memory_id": "self-update-allowlist",
+  "event_digest": "a41590f32e33511a609b44e9a88e8c4b960e2d720ddbd91805f14fe78827220c"
+}
